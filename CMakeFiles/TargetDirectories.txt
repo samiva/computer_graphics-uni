@@ -1,5 +1,0 @@
-K:/cg/CMakeFiles/INSTALL.dir
-K:/cg/CMakeFiles/ALL_BUILD.dir
-K:/cg/CMakeFiles/ZERO_CHECK.dir
-K:/cg/Mycode/src/CMakeFiles/computer_graphics.dir
-K:/cg/Mycode/src/CMakeFiles/INSTALL.dir
