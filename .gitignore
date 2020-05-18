@@ -266,3 +266,6 @@ CMakeFiles/
 **/CMakeFiles/
 CMakeCache.txt
 **/CMakeCache.txt
+
+bins/
+lib/
