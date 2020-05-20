@@ -51,6 +51,21 @@ bool Assignment_3::init()
 	glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
 	glEnableVertexAttribArray(m_shaderCube.getPositionAttribLocation());
 
+	// Cube2
+	glGenVertexArrays(1, &m_vaoCube2);
+	glBindVertexArray(m_vaoCube2);
+
+	glGenBuffers(1, &m_vboCube2);
+	glBindBuffer(GL_ARRAY_BUFFER, m_vboCube2);
+	glBufferData(GL_ARRAY_BUFFER, m_cube2Vertices.size() * sizeof(Vertex), &m_cube2Vertices[0], GL_STATIC_DRAW);
+
+	glGenBuffers(1, &m_eboCube2);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_eboCube2);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cube2Indices.size() * sizeof(unsigned int), &m_cube2Indices[0], GL_STATIC_DRAW);
+
+	glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
+	glEnableVertexAttribArray(m_shaderCube.getPositionAttribLocation());
+
 	// Skybox
 	auto skyShaderPaths = getShaderPaths("SkyboxShader");
 	if (!m_shaderSkybox.load(skyShaderPaths[0], skyShaderPaths[1])) {
@@ -107,16 +122,26 @@ void Assignment_3::render()
 
 	auto T = glm::translate(glm::mat4(1.0f), { 0,0,0 });
 
-	m_model = T;
+	m_modelCube = T;
 	auto V = m_camera.getView();
 	auto P = m_camera.getProj();
 
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_model));
+	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
 
 	glBindVertexArray(m_vaoCube);
 	glDrawElements(GL_TRIANGLES, m_cubeIndices.size(), GL_UNSIGNED_INT, 0);
+
+	// Draw cube2
+	auto T2 = glm::translate(glm::mat4(), { -10, 0,0 });
+	m_modelCube2 = T2;
+	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
+	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
+	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+
+	glBindVertexArray(m_vaoCube2);
+	glDrawElements(GL_TRIANGLES, m_cube2Indices.size(), GL_UNSIGNED_INT, 0);
 
 	glUseProgram(m_shaderSkybox.getShaderProgram());
 
@@ -367,6 +392,87 @@ void Assignment_3::createCube()
 	m_skyboxIndices.push_back(22);
 	m_skyboxIndices.push_back(23);
 
+
+	// Cube 2
+	// Front
+	m_cube2Vertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+
+	// Back
+	m_cube2Vertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,0 }, { 0,0 }));
+
+	// Right
+	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+
+	// Left
+	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+
+	// Top
+	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+
+	// Bottom
+	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+
+	// indices
+	// Front
+	m_cube2Indices.push_back(0);
+	m_cube2Indices.push_back(1);
+	m_cube2Indices.push_back(2);
+	m_cube2Indices.push_back(0);
+	m_cube2Indices.push_back(2);
+	m_cube2Indices.push_back(3);
+	// Back
+	m_cube2Indices.push_back(4);
+	m_cube2Indices.push_back(7);
+	m_cube2Indices.push_back(6);
+	m_cube2Indices.push_back(4);
+	m_cube2Indices.push_back(6);
+	m_cube2Indices.push_back(5);
+	// Right
+	m_cube2Indices.push_back(8);
+	m_cube2Indices.push_back(9);
+	m_cube2Indices.push_back(10);
+	m_cube2Indices.push_back(8);
+	m_cube2Indices.push_back(10);
+	m_cube2Indices.push_back(11);
+	// Left
+	m_cube2Indices.push_back(12);
+	m_cube2Indices.push_back(13);
+	m_cube2Indices.push_back(14);
+	m_cube2Indices.push_back(12);
+	m_cube2Indices.push_back(14);
+	m_cube2Indices.push_back(15);
+	// Top
+	m_cube2Indices.push_back(16);
+	m_cube2Indices.push_back(17);
+	m_cube2Indices.push_back(18);
+	m_cube2Indices.push_back(16);
+	m_cube2Indices.push_back(18);
+	m_cube2Indices.push_back(19);
+	// Bottom
+	m_cube2Indices.push_back(20);
+	m_cube2Indices.push_back(21);
+	m_cube2Indices.push_back(22);
+	m_cube2Indices.push_back(20);
+	m_cube2Indices.push_back(22);
+	m_cube2Indices.push_back(23);
 }
 
 void Assignment_3::createCubeMap(std::vector<std::string> filePaths)

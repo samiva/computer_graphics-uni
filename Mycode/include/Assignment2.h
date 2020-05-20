@@ -49,7 +49,7 @@ private:
 	GLuint m_vaoCube, m_vboCube, m_eboCube;
 	glm::mat4 m_view;
 	glm::mat4 m_proj;
-	glm::mat4 m_model;
+	glm::mat4 m_modelCube;
 
 	glm::vec3 m_camPos;
 	int m_moveFactor=0;

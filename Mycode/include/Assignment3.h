@@ -6,28 +6,12 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "camera.h"
+#include "vertex.h"
 #include <vector>
 
 class Assignment_3 : public Scene {
 
-	struct Vertex {
-		GLfloat position[3];
-		GLfloat normal[3];
-		GLfloat texcoord[2];
-
-		Vertex(glm::vec3 pos, glm::vec3 norm, glm::vec2 tex) {
-			position[0] = pos.x;
-			position[1] = pos.y;
-			position[2] = pos.z;
-
-			normal[0] = norm.x;
-			normal[1] = norm.y;
-			normal[2] = norm.z;
-
-			texcoord[0] = tex.x;
-			texcoord[1] = tex.y;
-		}
-	};
+	
 
 public:
 	Assignment_3();
@@ -44,9 +28,11 @@ private:
 
 	Camera m_camera;
 
-	glm::mat4 m_model;
+	glm::mat4 m_modelCube;
+	glm::mat4 m_modelCube2;
 
 	GLuint m_vaoCube, m_vboCube, m_eboCube;
+	GLuint m_vaoCube2, m_vboCube2, m_eboCube2;
 	GLuint m_vaoSkybox, m_vboSkybox, m_eboSkyBox;
 
 	// Textures
@@ -55,6 +41,9 @@ private:
 
 	std::vector<Vertex> m_cubeVertices;
 	std::vector<unsigned int> m_cubeIndices;
+
+	std::vector<Vertex> m_cube2Vertices;
+	std::vector<unsigned int> m_cube2Indices;
 
 	std::vector<Vertex> m_skyboxVertices;
 	std::vector<unsigned int> m_skyboxIndices;

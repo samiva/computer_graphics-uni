@@ -192,9 +192,9 @@ void Assignment_2::render()
 	auto Ry = glm::rotate(glm::mat4(), m_yaw, glm::vec3(0, 1, 0));
 	auto Rx = glm::rotate(glm::mat4(), m_pitch, glm::vec3(1, 0, 0));
 	auto R = Rx * Ry;
-	m_model = T * R;
+	m_modelCube = T * R;
 	m_view = glm::lookAt(m_camPos, glm::vec3(0), glm::vec3(0, 1, 0));
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_model"), 1, GL_FALSE, glm::value_ptr(m_model));
+	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_model"), 1, GL_FALSE, glm::value_ptr(m_modelCube));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_view"), 1, GL_FALSE, glm::value_ptr(m_view));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_proj"), 1, GL_FALSE, glm::value_ptr(m_proj));
 	glActiveTexture(GL_TEXTURE0 + m_textureUnit);

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -119,7 +119,8 @@
       <ImportLibrary>K:/cg/Mycode/src/Debug/computer_graphics.lib</ImportLibrary>
       <ProgramDataBaseFile>K:/cg/bin/x64/Debug/computer_graphics.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -139,7 +140,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -162,7 +164,8 @@
       <ImportLibrary>K:/cg/Mycode/src/Release/computer_graphics.lib</ImportLibrary>
       <ProgramDataBaseFile>K:/cg/bin/x64/Release/computer_graphics.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -182,7 +185,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -205,7 +209,8 @@
       <ImportLibrary>K:/cg/Mycode/src/MinSizeRel/computer_graphics.lib</ImportLibrary>
       <ProgramDataBaseFile>K:/cg/bin/x64/MinSizeRel/computer_graphics.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -248,7 +253,8 @@
       <ImportLibrary>K:/cg/Mycode/src/RelWithDebInfo/computer_graphics.lib</ImportLibrary>
       <ProgramDataBaseFile>K:/cg/bin/x64/RelWithDebInfo/computer_graphics.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -311,18 +317,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\vertex.h" />
     <ClInclude Include="K:\cg\Mycode\include\MonkeyScene.h" />
     <ClInclude Include="K:\cg\Mycode\include\Assignment2.h" />
     <ClInclude Include="K:\cg\Mycode\include\Assignment3.h" />
     <ClInclude Include="K:\cg\Mycode\include\helpers.h" />
     <ClInclude Include="K:\cg\Mycode\include\camera.h" />
     <ClInclude Include="K:\cg\Mycode\include\object.h" />
-    <ClCompile Include="K:\cg\Mycode\src\MonkeyScene.cpp"  />
-    <ClCompile Include="K:\cg\Mycode\src\Assignment2.cpp"  />
-    <ClCompile Include="K:\cg\Mycode\src\Assignment3.cpp"  />
-    <ClCompile Include="K:\cg\Mycode\src\camera.cpp"  />
-    <ClCompile Include="K:\cg\Mycode\src\helpers.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\main.cpp"  />
+    <ClCompile Include="K:\cg\Mycode\src\MonkeyScene.cpp" />
+    <ClCompile Include="K:\cg\Mycode\src\Assignment2.cpp" />
+    <ClCompile Include="K:\cg\Mycode\src\Assignment3.cpp" />
+    <ClCompile Include="K:\cg\Mycode\src\camera.cpp" />
+    <ClCompile Include="K:\cg\Mycode\src\helpers.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\main.cpp" />
     <ClInclude Include="K:\cg\cg-sources\debugmessagecallback.h" />
     <ClInclude Include="K:\cg\cg-sources\examplescene1.h" />
     <ClInclude Include="K:\cg\cg-sources\examplescene2.h" />
@@ -334,15 +341,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="K:\cg\cg-sources\shaderprogram.h" />
     <ClInclude Include="K:\cg\cg-sources\streamredirector.h" />
     <ClInclude Include="K:\cg\cg-sources\texture.h" />
-    <ClCompile Include="K:\cg\cg-sources\debugmessagecallback.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\examplescene1.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\examplescene2.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\examplescene3.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\examplescene4.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\objparser.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\sdlwrapper.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\shaderprogram.cpp"  />
-    <ClCompile Include="K:\cg\cg-sources\texture.cpp"  />
+    <ClCompile Include="K:\cg\cg-sources\debugmessagecallback.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\examplescene1.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\examplescene2.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\examplescene3.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\examplescene4.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\objparser.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\sdlwrapper.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\shaderprogram.cpp" />
+    <ClCompile Include="K:\cg\cg-sources\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="K:\cg\ZERO_CHECK.vcxproj">

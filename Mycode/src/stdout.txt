@@ -8,6 +8,8 @@ GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 1 (bound 
 GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 2 (bound to GL_ELEMENT_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
 GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 3 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
 GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 4 (bound to GL_ELEMENT_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
+GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 5 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
+GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 6 (bound to GL_ELEMENT_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
 Initial width and height: 640 x 480
 Camera {target: -4.48074 0 1.06003 up: 0 1 0
 Camera {target: -4.48074 0 1.06003 up: 0 1 0
@@ -44,623 +46,1165 @@ Camera {target: -4.48074 0 1.06003 up: 0 1 0
 Camera {target: -4.48074 0 1.06003 up: 0 1 0
 Camera {target: -4.48074 0 1.06003 up: 0 1 0
 Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Mouse motion: 0, 2
-Pitch angle: -0.034
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Camera {target: -4.47815 -0.339935 1.0652 up: 0 1 0
-Mouse motion: 2, 2
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Camera {target: -4.48074 0 1.06003 up: 0 1 0
+Key 80 (Left) pressed
+Camera {target: -4.63272 0 1.13621 up: 0 1 0
+Camera {target: -4.77575 0 1.2079 up: 0 1 0
+Camera {target: -4.92773 0 1.28407 up: 0 1 0
+Camera {target: -5.07077 0 1.35576 up: 0 1 0
+Camera {target: -5.22275 0 1.43194 up: 0 1 0
+Camera {target: -5.37473 0 1.50811 up: 0 1 0
+Camera {target: -5.51777 0 1.5798 up: 0 1 0
+Camera {target: -5.66975 0 1.65597 up: 0 1 0
+Camera {target: -5.82173 0 1.73215 up: 0 1 0
+Camera {target: -5.96477 0 1.80384 up: 0 1 0
+Camera {target: -6.11675 0 1.88001 up: 0 1 0
+Camera {target: -6.25979 0 1.9517 up: 0 1 0
+Camera {target: -6.41177 0 2.02787 up: 0 1 0
+Camera {target: -6.56375 0 2.10405 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Key 80 (Left) released
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Camera {target: -6.70679 0 2.17574 up: 0 1 0
+Key 79 (Right) pressed
+Camera {target: -6.53693 0 2.0906 up: 0 1 0
+Camera {target: -6.40283 0 2.02339 up: 0 1 0
+Camera {target: -6.25979 0 1.9517 up: 0 1 0
+Camera {target: -6.10781 0 1.87553 up: 0 1 0
+Camera {target: -5.96477 0 1.80384 up: 0 1 0
+Camera {target: -5.81279 0 1.72766 up: 0 1 0
+Camera {target: -5.66081 0 1.65149 up: 0 1 0
+Camera {target: -5.50883 0 1.57532 up: 0 1 0
+Camera {target: -5.36579 0 1.50363 up: 0 1 0
+Camera {target: -5.21381 0 1.42745 up: 0 1 0
+Camera {target: -5.07077 0 1.35576 up: 0 1 0
+Camera {target: -4.91879 0 1.27959 up: 0 1 0
+Camera {target: -4.76682 0 1.20342 up: 0 1 0
+Camera {target: -4.62378 0 1.13173 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.31982 0 0.979381 up: 0 1 0
+Camera {target: -4.16784 0 0.903208 up: 0 1 0
+Camera {target: -4.0248 0 0.831516 up: 0 1 0
+Camera {target: -3.87282 0 0.755343 up: 0 1 0
+Camera {target: -3.72084 0 0.679171 up: 0 1 0
+Camera {target: -3.5778 0 0.607479 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Key 79 (Right) released
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Key 79 (Right) pressed
+Camera {target: -3.27384 0 0.455133 up: 0 1 0
+Camera {target: -3.1308 0 0.383442 up: 0 1 0
+Camera {target: -2.97882 0 0.307269 up: 0 1 0
+Camera {target: -2.83578 0 0.235578 up: 0 1 0
+Camera {target: -2.6838 0 0.159405 up: 0 1 0
+Camera {target: -2.53182 0 0.0832319 up: 0 1 0
+Camera {target: -2.38878 0 0.0115404 up: 0 1 0
+Camera {target: -2.2368 0 -0.0646324 up: 0 1 0
+Camera {target: -2.08483 0 -0.140805 up: 0 1 0
+Camera {target: -1.93285 0 -0.216978 up: 0 1 0
+Camera {target: -1.78981 0 -0.28867 up: 0 1 0
+Camera {target: -1.63783 0 -0.364842 up: 0 1 0
+Camera {target: -1.48585 0 -0.441015 up: 0 1 0
+Camera {target: -1.34281 0 -0.512707 up: 0 1 0
+Camera {target: -1.19083 0 -0.58888 up: 0 1 0
+Camera {target: -1.03885 0 -0.665052 up: 0 1 0
+Camera {target: -0.895809 0 -0.736744 up: 0 1 0
+Camera {target: -0.74383 0 -0.812917 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Key 79 (Right) released
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Camera {target: -0.591851 0 -0.88909 up: 0 1 0
+Key 80 (Left) pressed
+Camera {target: -0.74383 0 -0.812917 up: 0 1 0
+Camera {target: -0.895809 0 -0.736744 up: 0 1 0
+Camera {target: -1.03885 0 -0.665052 up: 0 1 0
+Camera {target: -1.19083 0 -0.58888 up: 0 1 0
+Camera {target: -1.34281 0 -0.512707 up: 0 1 0
+Camera {target: -1.48585 0 -0.441015 up: 0 1 0
+Camera {target: -1.63783 0 -0.364842 up: 0 1 0
+Camera {target: -1.78981 0 -0.28867 up: 0 1 0
+Camera {target: -1.93285 0 -0.216978 up: 0 1 0
+Camera {target: -2.08483 0 -0.140805 up: 0 1 0
+Camera {target: -2.2368 0 -0.0646324 up: 0 1 0
+Camera {target: -2.37984 0 0.0070591 up: 0 1 0
+Camera {target: -2.53182 0 0.0832319 up: 0 1 0
+Camera {target: -2.6838 0 0.159405 up: 0 1 0
+Camera {target: -2.82684 0 0.231096 up: 0 1 0
+Camera {target: -2.97882 0 0.307269 up: 0 1 0
+Camera {target: -3.1308 0 0.383442 up: 0 1 0
+Camera {target: -3.27384 0 0.455133 up: 0 1 0
+Camera {target: -3.42582 0 0.531306 up: 0 1 0
+Camera {target: -3.5778 0 0.607479 up: 0 1 0
+Camera {target: -3.72084 0 0.679171 up: 0 1 0
+Camera {target: -3.87282 0 0.755343 up: 0 1 0
+Camera {target: -4.0248 0 0.831516 up: 0 1 0
+Camera {target: -4.16784 0 0.903208 up: 0 1 0
+Camera {target: -4.31982 0 0.979381 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Key 80 (Left) released
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Camera {target: -4.4718 0 1.05555 up: 0 1 0
+Mouse motion: 1, 344
 Yaw angle: -89.966
-Camera {target: -4.17186 -0.339935 0.918151 up: 0 1 0
-Mouse motion: 6, 2
+Pitch angle: -0.034
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Camera {target: -4.16292 -0.339935 0.913671 up: 0 1 0
+Mouse motion: 3, 344
 Yaw angle: -89.932
-Camera {target: -3.86076 -0.339935 0.781596 up: 0 1 0
-Mouse motion: 10, 0
-Mouse motion: 14, 0
+Camera {target: -3.85182 -0.339935 0.777116 up: 0 1 0
+Mouse motion: 5, 344
 Yaw angle: -89.9
-Pitch angle: -0.002
-Camera {target: -3.56592 -0.02 0.657419 up: 0 1 0
-Mouse motion: 18, 0
-Mouse motion: 22, 0
-Mouse motion: 28, 0
+Camera {target: -3.55493 -0.339935 0.658319 up: 0 1 0
+Mouse motion: 7, 344
 Yaw angle: -89.866
-Pitch angle: 0.032
-Camera {target: -3.24465 0.319945 0.546436 up: 0 1 0
-Mouse motion: 34, 0
-Mouse motion: 36, 0
+Camera {target: -3.2355 -0.339935 0.54258 up: 0 1 0
+Camera {target: -3.2355 -0.339935 0.54258 up: 0 1 0
+Mouse motion: 9, 344
 Yaw angle: -89.832
-Pitch angle: 0.066
-Camera {target: -2.91658 0.659521 0.457537 up: 0 1 0
-Mouse motion: 42, 0
-Mouse motion: 48, 0
+Camera {target: -2.91232 -0.339935 0.437763 up: 0 1 0
+Camera {target: -2.91232 -0.339935 0.437763 up: 0 1 0
+Mouse motion: 11, 344
 Yaw angle: -89.798
-Pitch angle: 0.1
-Camera {target: -2.58323 0.998334 0.391137 up: 0 1 0
-Mouse motion: 52, 0
-Mouse motion: 54, 0
+Camera {target: -2.58576 -0.339935 0.343991 up: 0 1 0
+Mouse motion: 13, 344
 Yaw angle: -89.766
-Pitch angle: 0.132
-Camera {target: -2.26603 1.31617 0.349466 up: 0 1 0
-Mouse motion: 60, 0
-Mouse motion: 66, 0
-Yaw angle: -89.732
-Camera {target: -1.9367 1.31617 0.278021 up: 0 1 0
-Mouse motion: 72, 0
-Mouse motion: 78, 0
-Yaw angle: -89.698
-Pitch angle: 0.166
-Camera {target: -1.59696 1.65239 0.267614 up: 0 1 0
-Mouse motion: 84, 0
-Mouse motion: 92, 0
-Mouse motion: 100, 0
-Yaw angle: -89.666
-Pitch angle: 0.198
-Camera {target: -1.27724 1.96709 0.278928 up: 0 1 0
-Mouse motion: 108, 0
-Mouse motion: 116, 0
-Yaw angle: -89.632
-Pitch angle: 0.232
-Camera {target: -0.939081 2.29924 0.313328 up: 0 1 0
-Mouse motion: 124, 0
-Mouse motion: 130, 0
-Yaw angle: -89.6
-Pitch angle: 0.264
-Camera {target: -0.623628 2.60944 0.366625 up: 0 1 0
-Mouse motion: 136, 0
-Mouse motion: 144, 0
-Yaw angle: -89.566
-Pitch angle: 0.298
-Camera {target: -0.29294 2.93609 0.445233 up: 0 1 0
-Mouse motion: 154, 0
-Mouse motion: 162, 0
-Yaw angle: -89.532
-Pitch angle: 0.332
-Camera {target: 0.0316438 3.25935 0.546129 up: 0 1 0
-Mouse motion: 170, 0
-Mouse motion: 176, 0
-Yaw angle: -89.5
-Pitch angle: 0.364
-Camera {target: 0.330222 3.56015 0.661034 up: 0 1 0
-Mouse motion: 184, 0
-Mouse motion: 190, 0
-Yaw angle: -89.466
-Pitch angle: 0.398
-Camera {target: 0.638704 3.87576 0.803774 up: 0 1 0
-Mouse motion: 200, 0
-Mouse motion: 206, 0
-Yaw angle: -89.4321
-Pitch angle: 0.432
-Camera {target: 0.936774 4.18688 0.967144 up: 0 1 0
-Mouse motion: 214, 0
-Mouse motion: 220, 0
-Mouse motion: 226, 0
-Yaw angle: -89.3981
-Pitch angle: 0.466
-Camera {target: 1.22306 4.49316 1.15039 up: 0 1 0
-Mouse motion: 230, 0
-Mouse motion: 234, 0
-Yaw angle: -89.3661
-Camera {target: 1.50555 4.49316 1.19405 up: 0 1 0
-Mouse motion: 238, 0
-Mouse motion: 246, 0
-Yaw angle: -89.3321
-Pitch angle: 0.5
-Camera {target: 1.77211 4.79426 1.40496 up: 0 1 0
-Mouse motion: 252, 0
-Mouse motion: 254, 0
-Yaw angle: -89.3001
-Pitch angle: 0.532
-Camera {target: 2.00936 5.07258 1.61958 up: 0 1 0
-Mouse motion: 262, 0
-Mouse motion: 268, 0
-Yaw angle: -89.2661
-Pitch angle: 0.566
-Camera {target: 2.24585 5.3626 1.86374 up: 0 1 0
-Mouse motion: 272, 0
-Mouse motion: 276, 0
-Yaw angle: -89.2321
-Pitch angle: 0.6
-Camera {target: 2.4652 5.64642 2.12341 up: 0 1 0
-Mouse motion: 282, 0
-Mouse motion: 286, 0
-Yaw angle: -89.2001
-Pitch angle: 0.632
-Camera {target: 2.65508 5.9076 2.38089 up: 0 1 0
-Mouse motion: 292, 0
-Mouse motion: 298, 0
-Mouse motion: 306, 0
-Yaw angle: -89.1661
-Pitch angle: 0.666
-Camera {target: 2.83835 6.17846 2.66717 up: 0 1 0
-Mouse motion: 316, 0
-Mouse motion: 322, 0
-Yaw angle: -89.1321
-Pitch angle: 0.7
-Camera {target: 3.00174 6.44218 2.96524 up: 0 1 0
-Mouse motion: 330, 0
-Mouse motion: 338, 0
-Yaw angle: -89.1001
-Pitch angle: 0.732
-Camera {target: 3.13669 6.68359 3.25531 up: 0 1 0
-Mouse motion: 348, 0
-Mouse motion: 360, 0
-Yaw angle: -89.0661
-Pitch angle: 0.766
-Camera {target: 3.25944 6.93258 3.57229 up: 0 1 0
-Mouse motion: 372, 0
-Mouse motion: 386, 0
-Yaw angle: -89.0321
-Pitch angle: 0.785398
-Camera {target: 3.41052 7.07107 3.80578 up: 0 1 0
-Mouse motion: 398, 0
-Mouse motion: 410, 0
-Yaw angle: -89.0001
-Pitch angle: 0.785398
-Camera {target: 3.60694 7.07107 3.91806 up: 0 1 0
-Mouse motion: 424, 0
-Mouse motion: 440, 0
-Yaw angle: -88.9641
-Pitch angle: 0.785398
-Camera {target: 3.82352 7.07107 4.05184 up: 0 1 0
-Mouse motion: 456, 0
-Mouse motion: 472, 0
-Yaw angle: -88.9321
-Pitch angle: 0.785398
-Camera {target: 4.01186 7.07107 4.1772 up: 0 1 0
-Mouse motion: 486, 0
-Mouse motion: 500, 0
-Mouse motion: 512, 0
-Yaw angle: -88.8981
-Pitch angle: 0.785398
-Camera {target: 4.20746 7.07107 4.31693 up: 0 1 0
-Mouse motion: 524, 0
-Mouse motion: 538, 0
-Yaw angle: -88.8661
-Pitch angle: 0.785398
-Camera {target: 4.38712 7.07107 4.45445 up: 0 1 0
-Mouse motion: 546, 0
-Mouse motion: 562, 0
-Yaw angle: -88.8321
-Pitch angle: 0.785398
-Camera {target: 4.57308 7.07107 4.60677 up: 0 1 0
-Mouse motion: 572, 0
-Mouse motion: 586, 0
-Yaw angle: -88.8001
-Pitch angle: 0.785398
-Camera {target: 4.74328 7.07107 4.75583 up: 0 1 0
-Mouse motion: 602, 0
-Mouse motion: 612, 0
-Yaw angle: -88.7661
-Pitch angle: 0.785398
-Camera {target: 4.91879 7.07107 4.92009 up: 0 1 0
-Mouse motion: 626, 0
-Mouse motion: 632, 0
-Yaw angle: -88.7321
-Pitch angle: 0.785398
-Camera {target: 5.08861 7.07107 5.09021 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.7001
-Pitch angle: 0.785398
-Camera {target: 5.24308 7.07107 5.25552 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.6661
-Pitch angle: 0.785398
-Camera {target: 5.40132 7.07107 5.43647 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.6321
-Pitch angle: 0.785398
-Camera {target: 5.55331 7.07107 5.6227 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.6001
-Pitch angle: 0.785398
-Camera {target: 5.69051 7.07107 5.80261 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.5661
-Pitch angle: 0.785398
-Camera {target: 5.82989 7.07107 5.99845 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.5321
-Camera {target: 5.96253 7.07107 6.19892 up: 0 1 0
-Mouse motion: 639, 0
-Mouse motion: 639, 0
-Yaw angle: -88.5001
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Camera {target: 6.08109 7.07107 6.39162 up: 0 1 0
-Mouse motion: 639, 0
-Yaw angle: -88.4681
-Camera {target: 6.19341 7.07107 6.58802 up: 0 1 0
-Mouse motion: 639, 2
-Mouse motion: 639, 4
-Pitch angle: 0.747398
-Camera {target: 6.42424 6.79733 6.46086 up: 0 1 0
-Mouse motion: 639, 8
-Mouse motion: 639, 10
-Pitch angle: 0.717398
-Camera {target: 6.59993 6.57426 6.36407 up: 0 1 0
-Mouse motion: 637, 14
-Mouse motion: 637, 16
-Yaw angle: -88.5021
-Pitch angle: 0.683398
-Camera {target: 6.66075 6.31432 6.02964 up: 0 1 0
-Mouse motion: 635, 16
-Mouse motion: 633, 20
-Yaw angle: -88.5341
-Pitch angle: 0.651398
-Camera {target: 6.69711 6.06299 5.71178 up: 0 1 0
-Mouse motion: 631, 24
-Mouse motion: 627, 26
-Yaw angle: -88.5681
-Pitch angle: 0.617398
-Camera {target: 6.7134 5.78916 5.37226 up: 0 1 0
-Mouse motion: 627, 28
-Mouse motion: 623, 32
-Yaw angle: -88.6001
-Pitch angle: 0.585398
-Camera {target: 6.70761 5.52531 5.05238 up: 0 1 0
-Mouse motion: 619, 36
-Mouse motion: 615, 44
-Yaw angle: -88.6341
-Pitch angle: 0.551398
-Camera {target: 6.67906 5.23879 4.71367 up: 0 1 0
-Mouse motion: 613, 46
-Mouse motion: 605, 52
-Yaw angle: -88.6681
-Pitch angle: 0.517398
-Camera {target: 6.62757 4.94621 4.37769 up: 0 1 0
-Mouse motion: 599, 58
-Mouse motion: 589, 66
-Yaw angle: -88.7001
-Pitch angle: 0.485398
-Camera {target: 6.55835 4.66561 4.06534 up: 0 1 0
-Mouse motion: 581, 74
-Mouse motion: 573, 80
-Mouse motion: 563, 86
-Yaw angle: -88.7341
-Pitch angle: 0.451398
-Camera {target: 6.46308 4.36224 3.73905 up: 0 1 0
-Mouse motion: 551, 94
-Mouse motion: 545, 98
-Yaw angle: -88.7681
-Pitch angle: 0.417398
-Camera {target: 6.34586 4.05383 3.42 up: 0 1 0
-Mouse motion: 531, 110
-Mouse motion: 521, 116
-Yaw angle: -88.8001
-Pitch angle: 0.385398
-Camera {target: 6.21597 3.75928 3.12763 up: 0 1 0
-Mouse motion: 511, 126
-Mouse motion: 501, 130
-Yaw angle: -88.8341
-Pitch angle: 0.351398
-Camera {target: 6.05778 3.44211 2.82677 up: 0 1 0
-Mouse motion: 487, 136
-Mouse motion: 473, 146
-Yaw angle: -88.8681
-Pitch angle: 0.317398
-Camera {target: 5.87952 3.12096 2.53737 up: 0 1 0
-Mouse motion: 463, 150
-Mouse motion: 453, 156
-Yaw angle: -88.9021
-Pitch angle: 0.283398
-Camera {target: 5.682 2.7962 2.26074 up: 0 1 0
-Mouse motion: 443, 162
-Mouse motion: 433, 166
-Mouse motion: 425, 170
-Yaw angle: -88.9341
-Pitch angle: 0.251398
-Camera {target: 5.47933 2.48758 2.0132 up: 0 1 0
-Mouse motion: 417, 174
-Mouse motion: 413, 176
-Yaw angle: -88.9681
-Pitch angle: 0.217398
-Camera {target: 5.24712 2.1569 1.76498 up: 0 1 0
-Mouse motion: 401, 180
-Mouse motion: 399, 180
-Yaw angle: -89.0001
-Pitch angle: 0.185398
-Camera {target: 5.01363 1.84338 1.54628 up: 0 1 0
-Mouse motion: 391, 184
-Mouse motion: 385, 188
-Yaw angle: -89.0341
-Pitch angle: 0.151398
-Camera {target: 4.75078 1.5082 1.33078 up: 0 1 0
-Mouse motion: 381, 188
-Mouse motion: 373, 192
-Yaw angle: -89.0681
-Pitch angle: 0.117398
-Camera {target: 4.47389 1.17129 1.13363 up: 0 1 0
-Mouse motion: 369, 194
-Mouse motion: 361, 196
-Yaw angle: -89.1001
-Pitch angle: 0.0853982
-Camera {target: 4.2016 0.852944 0.965674 up: 0 1 0
-Mouse motion: 357, 198
-Mouse motion: 353, 200
-Yaw angle: -89.1341
-Pitch angle: 0.0513982
-Camera {target: 3.90117 0.513755 0.806692 up: 0 1 0
-Mouse motion: 349, 202
-Mouse motion: 343, 204
-Yaw angle: -89.1681
-Pitch angle: 0.0173981
-Camera {target: 3.59064 0.173973 0.668489 up: 0 1 0
-Mouse motion: 335, 206
-Mouse motion: 329, 208
-Yaw angle: -89.2001
-Pitch angle: -0.0146019
-Camera {target: 3.29041 -0.146013 0.557973 up: 0 1 0
-Mouse motion: 319, 212
-Mouse motion: 313, 214
-Mouse motion: 307, 214
-Yaw angle: -89.2341
-Pitch angle: -0.0486019
-Camera {target: 2.96439 -0.485827 0.461845 up: 0 1 0
-Mouse motion: 297, 214
-Mouse motion: 287, 218
-Yaw angle: -89.2681
-Pitch angle: -0.0826019
-Camera {target: 2.63258 -0.82508 0.388092 up: 0 1 0
-Mouse motion: 279, 220
-Mouse motion: 269, 220
-Yaw angle: -89.3021
-Pitch angle: -0.116602
-Camera {target: 2.29654 -1.16338 0.337056 up: 0 1 0
-Mouse motion: 259, 222
-Mouse motion: 247, 224
-Yaw angle: -89.3341
-Pitch angle: -0.148602
-Camera {target: 1.97776 -1.48056 0.309983 up: 0 1 0
-Mouse motion: 235, 228
-Mouse motion: 225, 228
-Yaw angle: -89.368
-Pitch angle: -0.182602
-Camera {target: 1.63792 -1.81589 0.30362 up: 0 1 0
-Mouse motion: 217, 230
-Mouse motion: 211, 230
-Yaw angle: -89.4
-Pitch angle: -0.214602
-Camera {target: 1.31835 -2.12958 0.318738 up: 0 1 0
-Mouse motion: 205, 230
-Mouse motion: 197, 230
-Mouse motion: 191, 230
-Yaw angle: -89.434
-Camera {target: 0.988526 -2.12958 0.279522 up: 0 1 0
-Mouse motion: 187, 230
-Mouse motion: 181, 230
-Yaw angle: -89.468
-Camera {target: 0.657555 -2.12958 0.251539 up: 0 1 0
-Mouse motion: 173, 232
-Mouse motion: 165, 234
-Yaw angle: -89.5
-Pitch angle: -0.246602
-Camera {target: 0.342758 -2.4411 0.308584 up: 0 1 0
-Mouse motion: 161, 234
-Mouse motion: 155, 234
-Yaw angle: -89.534
-Camera {target: 0.0131488 -2.4411 0.302533 up: 0 1 0
-Mouse motion: 149, 234
-Mouse motion: 143, 236
-Yaw angle: -89.568
-Pitch angle: -0.280602
-Camera {target: -0.313585 -2.76934 0.396229 up: 0 1 0
-Mouse motion: 139, 236
-Mouse motion: 135, 238
-Yaw angle: -89.6
-Pitch angle: -0.312602
-Camera {target: -0.614629 -3.07535 0.504505 up: 0 1 0
-Mouse motion: 131, 240
-Mouse motion: 125, 242
-Yaw angle: -89.634
-Pitch angle: -0.346602
-Camera {target: -0.92619 -3.39704 0.640389 up: 0 1 0
-Mouse motion: 119, 244
-Mouse motion: 117, 244
-Yaw angle: -89.668
-Pitch angle: -0.380602
-Camera {target: -1.2278 -3.71479 0.79713 up: 0 1 0
-Mouse motion: 111, 246
-Mouse motion: 105, 246
-Mouse motion: 103, 246
-Yaw angle: -89.702
-Pitch angle: -0.414602
-Camera {target: -1.51806 -4.02826 0.974002 up: 0 1 0
-Mouse motion: 101, 248
-Mouse motion: 97, 250
+Camera {target: -2.27566 -0.339935 0.265923 up: 0 1 0
+Camera {target: -2.27566 -0.339935 0.265923 up: 0 1 0
+Mouse motion: 15, 344
 Yaw angle: -89.734
-Pitch angle: -0.446602
-Camera {target: -1.77969 -4.31903 1.15813 up: 0 1 0
-Mouse motion: 93, 250
-Mouse motion: 89, 252
-Yaw angle: -89.768
-Pitch angle: -0.480602
-Camera {target: -2.04415 -4.62313 1.37167 up: 0 1 0
-Mouse motion: 87, 254
-Mouse motion: 85, 254
-Yaw angle: -89.8
-Pitch angle: -0.512602
-Camera {target: -2.27927 -4.90446 1.58863 up: 0 1 0
-Mouse motion: 83, 256
-Mouse motion: 77, 256
-Yaw angle: -89.834
-Pitch angle: -0.546602
-Camera {target: -2.51332 -5.19787 1.83512 up: 0 1 0
-Mouse motion: 75, 258
-Yaw angle: -89.868
-Pitch angle: -0.580602
-Camera {target: -2.73009 -5.48527 2.09694 up: 0 1 0
-Mouse motion: 73, 258
-Mouse motion: 71, 258
-Yaw angle: -89.9
-Camera {target: -2.98153 -5.48527 2.18833 up: 0 1 0
-Mouse motion: 69, 258
-Yaw angle: -89.934
-Camera {target: -3.24533 -5.48527 2.29418 up: 0 1 0
-Mouse motion: 67, 258
-Yaw angle: -89.968
-Camera {target: -3.50537 -5.48527 2.40894 up: 0 1 0
-Camera {target: -3.50537 -5.48527 2.40894 up: 0 1 0
-Mouse motion: 67, 260
-Pitch angle: -0.614602
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Camera {target: -3.42517 -5.76633 2.58262 up: 0 1 0
-Mouse motion: 67, 258
-Pitch angle: -0.580602
-Camera {target: -3.50537 -5.48527 2.40894 up: 0 1 0
-Mouse motion: 69, 256
-Mouse motion: 73, 250
-Yaw angle: -89.936
-Pitch angle: -0.548602
-Camera {target: -3.32749 -5.21495 2.14302 up: 0 1 0
-Mouse motion: 75, 244
-Mouse motion: 79, 242
-Yaw angle: -89.902
-Pitch angle: -0.514602
-Camera {target: -3.12029 -4.92188 1.87357 up: 0 1 0
-Mouse motion: 81, 236
-Mouse motion: 89, 232
-Yaw angle: -89.868
-Pitch angle: -0.480602
-Camera {target: -2.89526 -4.62313 1.61882 up: 0 1 0
-Mouse motion: 95, 226
-Mouse motion: 99, 220
-Yaw angle: -89.836
-Pitch angle: -0.448602
-Camera {target: -2.6681 -4.33706 1.39354 up: 0 1 0
-Mouse motion: 105, 214
-Mouse motion: 111, 208
-Mouse motion: 119, 204
-Yaw angle: -89.802
-Pitch angle: -0.414602
-Camera {target: -2.41149 -4.02826 1.17062 up: 0 1 0
-Mouse motion: 129, 198
-Mouse motion: 133, 196
-Yaw angle: -89.768
-Pitch angle: -0.380602
-Camera {target: -2.14034 -3.71479 0.965661 up: 0 1 0
-Mouse motion: 141, 192
-Mouse motion: 149, 186
-Yaw angle: -89.736
-Pitch angle: -0.348602
-Camera {target: -1.87295 -3.41584 0.790001 up: 0 1 0
-Mouse motion: 155, 182
-Mouse motion: 157, 178
-Yaw angle: -89.702
-Pitch angle: -0.314602
-Camera {target: -1.57718 -3.09438 0.622509 up: 0 1 0
-Mouse motion: 161, 176
-Mouse motion: 165, 174
-Yaw angle: -89.668
-Pitch angle: -0.280602
-Camera {target: -1.27071 -2.76934 0.475501 up: 0 1 0
-Mouse motion: 169, 170
-Mouse motion: 171, 170
+Camera {target: -1.96322 -0.339935 0.197814 up: 0 1 0
+Camera {target: -1.96322 -0.339935 0.197814 up: 0 1 0
+Camera {target: -1.96322 -0.339935 0.197814 up: 0 1 0
+Camera {target: -1.96322 -0.339935 0.197814 up: 0 1 0
+Mouse motion: 17, 344
+Yaw angle: -89.7
+Camera {target: -1.62905 -0.339935 0.136442 up: 0 1 0
+Mouse motion: 21, 344
+Yaw angle: -89.666
+Camera {target: -1.293 -0.339935 0.086463 up: 0 1 0
+Mouse motion: 23, 344
 Yaw angle: -89.634
-Pitch angle: -0.246602
-Camera {target: -0.95496 -2.4411 0.349659 up: 0 1 0
-Mouse motion: 173, 170
-Yaw angle: -89.602
-Camera {target: -0.645735 -2.4411 0.324047 up: 0 1 0
-Camera {target: -0.645735 -2.4411 0.324047 up: 0 1 0
-Camera {target: -0.645735 -2.4411 0.324047 up: 0 1 0
-Camera {target: -0.645735 -2.4411 0.324047 up: 0 1 0
-Camera {target: -0.645735 -2.4411 0.324047 up: 0 1 0
-Mouse motion: 173, 168
-Pitch angle: -0.214602
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
-Camera {target: -0.650605 -2.12958 0.251073 up: 0 1 0
+Camera {target: -0.975318 -0.339935 0.0498829 up: 0 1 0
+Mouse motion: 25, 344
+Yaw angle: -89.598
+Camera {target: -0.616683 -0.339935 0.0208998 up: 0 1 0
+Mouse motion: 27, 344
+Yaw angle: -89.566
+Camera {target: -0.297253 -0.339935 0.00599003 up: 0 1 0
+Camera {target: -0.297253 -0.339935 0.00599003 up: 0 1 0
+Camera {target: -0.297253 -0.339935 0.00599003 up: 0 1 0
+Mouse motion: 29, 344
+Yaw angle: -89.532
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Camera {target: 0.0424685 -0.339935 0.00135517 up: 0 1 0
+Key 4 (A) pressed
+Camera {target: -0.127531 -0.339935 0.000784874 up: 0 1 0
+Camera {target: -0.28753 -0.339935 0.000247955 up: 0 1 0
+Camera {target: -0.457529 -0.339935 -0.000322342 up: 0 1 0
+Camera {target: -0.627528 -0.339935 -0.000892639 up: 0 1 0
+Camera {target: -0.787527 -0.339935 -0.00142956 up: 0 1 0
+Camera {target: -0.957526 -0.339935 -0.00199986 up: 0 1 0
+Camera {target: -1.12752 -0.339935 -0.00257015 up: 0 1 0
+Camera {target: -1.28752 -0.339935 -0.00310707 up: 0 1 0
+Camera {target: -1.45752 -0.339935 -0.00367737 up: 0 1 0
+Camera {target: -1.62752 -0.339935 -0.00424767 up: 0 1 0
+Camera {target: -1.78752 -0.339935 -0.00478458 up: 0 1 0
+Camera {target: -1.95752 -0.339935 -0.00535488 up: 0 1 0
+Camera {target: -2.12752 -0.339935 -0.00592518 up: 0 1 0
+Camera {target: -2.28752 -0.339935 -0.0064621 up: 0 1 0
+Camera {target: -2.45752 -0.339935 -0.00703239 up: 0 1 0
+Camera {target: -2.62752 -0.339935 -0.00760269 up: 0 1 0
+Camera {target: -2.78752 -0.339935 -0.00813961 up: 0 1 0
+Camera {target: -2.95751 -0.339935 -0.00870991 up: 0 1 0
+Camera {target: -3.12751 -0.339935 -0.0092802 up: 0 1 0
+Camera {target: -3.28751 -0.339935 -0.00981712 up: 0 1 0
+Camera {target: -3.45751 -0.339935 -0.0103874 up: 0 1 0
+Camera {target: -3.62751 -0.339935 -0.0109577 up: 0 1 0
+Camera {target: -3.78751 -0.339935 -0.0114946 up: 0 1 0
+Camera {target: -3.95751 -0.339935 -0.0120649 up: 0 1 0
+Camera {target: -4.12751 -0.339935 -0.0126352 up: 0 1 0
+Camera {target: -4.28751 -0.339935 -0.0131721 up: 0 1 0
+Camera {target: -4.45751 -0.339935 -0.0137424 up: 0 1 0
+Camera {target: -4.62751 -0.339935 -0.0143127 up: 0 1 0
+Camera {target: -4.7875 -0.339935 -0.0148497 up: 0 1 0
+Camera {target: -4.9575 -0.339935 -0.01542 up: 0 1 0
+Key 4 (A) pressed
+Camera {target: -5.1275 -0.339935 -0.0159903 up: 0 1 0
+Camera {target: -5.2875 -0.339935 -0.0165272 up: 0 1 0
+Key 4 (A) pressed
+Camera {target: -5.4575 -0.339935 -0.0170975 up: 0 1 0
+Camera {target: -5.6275 -0.339935 -0.0176678 up: 0 1 0
+Key 4 (A) pressed
+Camera {target: -5.7875 -0.339935 -0.0182047 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Key 4 (A) pressed
+Key 4 (A) released
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Camera {target: -5.9575 -0.339935 -0.018775 up: 0 1 0
+Key 26 (W) pressed
+Camera {target: -5.95693 -0.345713 -0.188676 up: 0 1 0
+Camera {target: -5.95636 -0.351492 -0.358577 up: 0 1 0
+Camera {target: -5.95582 -0.356931 -0.518483 up: 0 1 0
+Camera {target: -5.95525 -0.36271 -0.688384 up: 0 1 0
+Camera {target: -5.95468 -0.368489 -0.858285 up: 0 1 0
+Camera {target: -5.95415 -0.373928 -1.01819 up: 0 1 0
+Camera {target: -5.95358 -0.379707 -1.18809 up: 0 1 0
+Mouse motion: 29, 342
+Pitch angle: 0
+Camera {target: -5.95299 -0.0455512 -1.36377 up: 0 1 0
+Mouse motion: 31, 342
+Yaw angle: -89.5
+Camera {target: -5.63255 -0.0455512 -1.51758 up: 0 1 0
+Camera {target: -5.62654 -0.0455512 -1.68747 up: 0 1 0
+Mouse motion: 31, 340
+Pitch angle: 0.034
+Camera {target: -5.62073 0.294383 -1.85159 up: 0 1 0
+Key 26 (W) released
+Camera {target: -5.62073 0.294383 -1.85159 up: 0 1 0
+Mouse motion: 31, 338
+Pitch angle: 0.068
+Camera {target: -5.62135 0.633925 -1.83427 up: 0 1 0
+Mouse motion: 31, 336
+Pitch angle: 0.102
+Camera {target: -5.62237 0.972681 -1.80542 up: 0 1 0
+Camera {target: -5.62237 0.972681 -1.80542 up: 0 1 0
+Camera {target: -5.62237 0.972681 -1.80542 up: 0 1 0
+Mouse motion: 33, 334
+Yaw angle: -89.466
+Pitch angle: 0.136
+Camera {target: -5.28744 1.31026 -1.74746 up: 0 1 0
+Camera {target: -5.28744 1.31026 -1.74746 up: 0 1 0
+Camera {target: -5.28744 1.31026 -1.74746 up: 0 1 0
+Mouse motion: 35, 334
+Mouse motion: 35, 332
+Yaw angle: -89.432
+Pitch angle: 0.17
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Camera {target: -4.95723 1.64627 -1.66688 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -4.9735 1.6192 -1.51003 up: 0 1 0
+Camera {target: -4.99079 1.59044 -1.34337 up: 0 1 0
+Camera {target: -5.00807 1.56168 -1.17672 up: 0 1 0
+Camera {target: -5.02434 1.53461 -1.01987 up: 0 1 0
+Camera {target: -5.04162 1.50585 -0.853209 up: 0 1 0
+Camera {target: -5.05891 1.47709 -0.686554 up: 0 1 0
+Camera {target: -5.07518 1.45002 -0.529702 up: 0 1 0
+Camera {target: -5.09246 1.42126 -0.363047 up: 0 1 0
+Camera {target: -5.10975 1.3925 -0.196391 up: 0 1 0
+Camera {target: -5.12601 1.36543 -0.0395393 up: 0 1 0
+Camera {target: -5.1433 1.33667 0.127116 up: 0 1 0
+Camera {target: -5.16058 1.30791 0.293772 up: 0 1 0
+Camera {target: -5.17685 1.28084 0.450624 up: 0 1 0
+Camera {target: -5.19414 1.25208 0.617279 up: 0 1 0
+Camera {target: -5.21142 1.22332 0.783935 up: 0 1 0
+Camera {target: -5.22769 1.19625 0.940786 up: 0 1 0
+Camera {target: -5.24497 1.16749 1.10744 up: 0 1 0
+Camera {target: -5.26226 1.13873 1.2741 up: 0 1 0
+Camera {target: -5.27853 1.11166 1.43095 up: 0 1 0
+Camera {target: -5.29581 1.0829 1.5976 up: 0 1 0
+Camera {target: -5.3131 1.05413 1.76426 up: 0 1 0
+Camera {target: -5.32936 1.02706 1.92111 up: 0 1 0
+Camera {target: -5.34665 0.998304 2.08777 up: 0 1 0
+Camera {target: -5.36393 0.969543 2.25442 up: 0 1 0
+Camera {target: -5.3802 0.942474 2.41127 up: 0 1 0
+Camera {target: -5.39749 0.913713 2.57793 up: 0 1 0
+Camera {target: -5.41477 0.884952 2.74459 up: 0 1 0
+Camera {target: -5.43104 0.857882 2.90144 up: 0 1 0
+Camera {target: -5.44832 0.829121 3.06809 up: 0 1 0
+Camera {target: -5.46561 0.80036 3.23475 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.48493 0.768216 3.42101 up: 0 1 0
+Camera {target: -5.49916 0.74453 3.55826 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.51645 0.715769 3.72491 up: 0 1 0
+Camera {target: -5.53271 0.6887 3.88176 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.55 0.659939 4.04842 up: 0 1 0
+Camera {target: -5.56728 0.631178 4.21508 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.58457 0.602417 4.38173 up: 0 1 0
+Camera {target: -5.60084 0.575348 4.53858 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.61812 0.546587 4.70524 up: 0 1 0
+Camera {target: -5.63439 0.519517 4.86209 up: 0 1 0
+Mouse motion: 35, 334
+Key 22 (S) pressed
+Pitch angle: 0.136
+Camera {target: -5.64633 0.154744 4.97721 up: 0 1 0
+Mouse motion: 35, 336
+Pitch angle: 0.102
+Camera {target: -5.65954 -0.205884 5.10459 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.67699 -0.223194 5.27281 up: 0 1 0
+Camera {target: -5.69341 -0.239485 5.43113 up: 0 1 0
+Mouse motion: 35, 338
+Key 22 (S) pressed
+Pitch angle: 0.068
+Camera {target: -5.70788 -0.595551 5.57063 up: 0 1 0
+Camera {target: -5.72434 -0.606423 5.72941 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.74184 -0.617974 5.89811 up: 0 1 0
+Camera {target: -5.75934 -0.629525 6.06681 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.7758 -0.640397 6.22559 up: 0 1 0
+Camera {target: -5.7933 -0.651948 6.39429 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.8108 -0.663499 6.563 up: 0 1 0
+Camera {target: -5.82727 -0.674371 6.72178 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.84476 -0.685922 6.89048 up: 0 1 0
+Camera {target: -5.86226 -0.697473 7.05918 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.87976 -0.709024 7.22789 up: 0 1 0
+Camera {target: -5.89622 -0.719896 7.38667 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.91372 -0.731447 7.55537 up: 0 1 0
+Camera {target: -5.93019 -0.742319 7.71415 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.94769 -0.75387 7.88285 up: 0 1 0
+Camera {target: -5.96518 -0.765421 8.05155 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -5.98165 -0.776293 8.21033 up: 0 1 0
+Camera {target: -5.99915 -0.787844 8.37904 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -6.01665 -0.799395 8.54774 up: 0 1 0
+Camera {target: -6.03311 -0.810267 8.70652 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -6.05061 -0.821818 8.87522 up: 0 1 0
+Camera {target: -6.06811 -0.833369 9.04392 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -6.0856 -0.84492 9.21263 up: 0 1 0
+Camera {target: -6.10207 -0.855792 9.37141 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -6.11957 -0.867343 9.54011 up: 0 1 0
+Camera {target: -6.13604 -0.878215 9.69889 up: 0 1 0
+Key 22 (S) pressed
+Camera {target: -6.15353 -0.889766 9.86759 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Key 22 (S) released
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
+Camera {target: -6.17103 -0.901317 10.0363 up: 0 1 0
 Key 41 (Escape) pressed
