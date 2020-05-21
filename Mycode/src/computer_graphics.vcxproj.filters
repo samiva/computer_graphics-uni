@@ -1,115 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="K:\cg\Mycode\src\MonkeyScene.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\Mycode\src\MonkeyScene.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\Mycode\src\Assignment2.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\Mycode\src\Assignment2.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\Mycode\src\Assignment3.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\Mycode\src\Assignment3.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\Mycode\src\camera.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\Mycode\src\camera.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\Mycode\src\helpers.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\Mycode\src\helpers.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\main.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\main.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\debugmessagecallback.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\debugmessagecallback.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\examplescene1.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\examplescene1.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\examplescene2.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\examplescene2.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\examplescene3.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\examplescene3.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\examplescene4.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\examplescene4.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\objparser.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\objparser.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\sdlwrapper.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\sdlwrapper.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\shaderprogram.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\shaderprogram.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="K:\cg\cg-sources\texture.cpp">
+    <ClCompile Include="D:\projects\computer_graphics-uni\cg-sources\texture.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="K:\cg\Mycode\include\MonkeyScene.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\Mycode\include\MonkeyScene.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\Mycode\include\Assignment2.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\Mycode\include\Assignment2.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\Mycode\include\Assignment3.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\Mycode\include\Assignment3.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\Mycode\include\helpers.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\Mycode\include\helpers.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\Mycode\include\camera.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\Mycode\include\camera.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\Mycode\include\object.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\Mycode\include\object.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\debugmessagecallback.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\debugmessagecallback.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\examplescene1.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\examplescene1.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\examplescene2.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\examplescene2.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\examplescene3.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\examplescene3.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\examplescene4.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\examplescene4.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\objparser.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\objparser.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\scene.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\scene.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\sdlwrapper.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\sdlwrapper.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\shaderprogram.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\shaderprogram.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\streamredirector.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\streamredirector.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="K:\cg\cg-sources\texture.h">
+    <ClInclude Include="D:\projects\computer_graphics-uni\cg-sources\texture.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\vertex.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="K:\cg\Mycode\src\CMakeLists.txt" />
+    <CustomBuild Include="D:\projects\computer_graphics-uni\Mycode\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{20A23C0A-F7E2-362C-BA32-AC95B16EB83A}</UniqueIdentifier>
+      <UniqueIdentifier>{C5521C07-EDDF-3E7F-8E93-3A02BCEA511F}</UniqueIdentifier>
     </Filter>
     <Filter Include="source">
-      <UniqueIdentifier>{EB842208-EEA1-3F08-BBC5-43BED302401E}</UniqueIdentifier>
+      <UniqueIdentifier>{0B35EC4D-3F97-38CA-A661-2FAE35B65F72}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
