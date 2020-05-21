@@ -37,15 +37,15 @@ bool Assignment_3::init()
 	SDL_SetRelativeMouseMode(SDL_TRUE);
 
 	// Cube
-	glGenVertexArrays(1, &m_vaoCube);
-	glBindVertexArray(m_vaoCube);
+	glGenVertexArrays(1, &m_vao);
+	glBindVertexArray(m_vao);
 
-	glGenBuffers(1, &m_vboCube);
-	glBindBuffer(GL_ARRAY_BUFFER, m_vboCube);
+	glGenBuffers(1, &m_vbo);
+	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 	glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
 
-	glGenBuffers(1, &m_eboCube);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_eboCube);
+	glGenBuffers(1, &m_ebo);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
 
 	glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
@@ -113,6 +113,7 @@ void Assignment_3::resize(GLsizei width, GLsizei height)
 void Assignment_3::update(float timestep)
 {
 	m_camera.update(timestep);
+	m_yaw += glm::two_pi<float>() * 0.1f * timestep;
 }
 
 void Assignment_3::render()
@@ -121,7 +122,7 @@ void Assignment_3::render()
 	glUseProgram(m_shaderCube.getShaderProgram());
 
 	auto T = glm::translate(glm::mat4(1.0f), { 0,0,0 });
-
+	auto Mcube = T;
 	m_modelCube = T;
 	auto V = m_camera.getView();
 	auto P = m_camera.getProj();
@@ -130,12 +131,13 @@ void Assignment_3::render()
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
 
-	glBindVertexArray(m_vaoCube);
+	glBindVertexArray(m_vao);
 	glDrawElements(GL_TRIANGLES, m_cubeIndices.size(), GL_UNSIGNED_INT, 0);
 
 	// Draw cube2
 	auto T2 = glm::translate(glm::mat4(), { -10, 0,0 });
-	m_modelCube2 = T2;
+	auto Ry = glm::rotate(glm::mat4(),m_yaw, { 0,1,0 });
+	m_modelCube2 = Mcube* Ry*T2;
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));

@@ -31,7 +31,9 @@ private:
 	glm::mat4 m_modelCube;
 	glm::mat4 m_modelCube2;
 
-	GLuint m_vaoCube, m_vboCube, m_eboCube;
+	float m_yaw = 0;
+
+	GLuint m_vao, m_vbo, m_ebo;
 	GLuint m_vaoCube2, m_vboCube2, m_eboCube2;
 	GLuint m_vaoSkybox, m_vboSkybox, m_eboSkyBox;
 

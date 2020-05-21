@@ -1,6 +1,7 @@
 Assignment2.h
 Assignment3.h
 camera.h
+cube.h
 helpers.h
 MonkeyScene.h
 object.h

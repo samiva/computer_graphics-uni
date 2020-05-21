@@ -4,19 +4,26 @@ include_directories(${PROJ_INCLUDES})
 include_directories(${SDL2_INCLUDE})
 include_directories(${CMAKE_SOURCE_DIR})
 
-set(ASSIGNMENT_INCLUDES ${MY_INCLUDES}/MonkeyScene.h
-                        ${MY_INCLUDES}/Assignment2.h
-                        ${MY_INCLUDES}/Assignment3.h
-                        ${MY_INCLUDES}/helpers.h
-                        ${MY_INCLUDES}/camera.h
-                        ${MY_INCLUDES}/object.h)
+set(ASSIGNMENT_INCLUDES 
+                    ${MY_INCLUDES}/Assignment2.h
+                    ${MY_INCLUDES}/Assignment3.h
+                    ${MY_INCLUDES}/camera.h
+                    ${MY_INCLUDES}/cube.h
+                    ${MY_INCLUDES}/helpers.h
+                    ${MY_INCLUDES}/MonkeyScene.h
+                    ${MY_INCLUDES}/object.h
+                    ${MY_INCLUDES}/vertex.h
+                    )
 
-set(ASSIGNMENT_SRC ${MY_SOURCE}/MonkeyScene.cpp 
-                        ${MY_SOURCE}/Assignment2.cpp
-                        ${MY_SOURCE}/Assignment3.cpp
-                        ${MY_SOURCE}/camera.cpp
-                        ${MY_SOURCE}/helpers.cpp
-                        ${CG_SOURCE}/main.cpp)
+set(ASSIGNMENT_SRC                         
+                    ${MY_SOURCE}/Assignment2.cpp
+                    ${MY_SOURCE}/Assignment3.cpp
+                    ${MY_SOURCE}/camera.cpp
+                    ${MY_SOURCE}/cube.cpp
+                    ${MY_SOURCE}/helpers.cpp
+                    ${MY_SOURCE}/MonkeyScene.cpp
+                    ${MY_SOURCE}/object.cpp
+                    )
 
 set(CG_INC ${CG_SOURCE}/debugmessagecallback.h
                     ${CG_SOURCE}/examplescene1.h

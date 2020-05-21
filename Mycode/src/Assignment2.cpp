@@ -132,15 +132,15 @@ bool Assignment_2::init()
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	glGenVertexArrays(1, &m_vaoCube);
-	glBindVertexArray(m_vaoCube);
+	glGenVertexArrays(1, &m_vao);
+	glBindVertexArray(m_vao);
 
-	glGenBuffers(1, &m_eboCube);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_eboCube);
+	glGenBuffers(1, &m_ebo);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
 
-	glGenBuffers(1, &m_vboCube);
-	glBindBuffer(GL_ARRAY_BUFFER, m_vboCube);
+	glGenBuffers(1, &m_vbo);
+	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 	glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
 
 
@@ -199,7 +199,7 @@ void Assignment_2::render()
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_proj"), 1, GL_FALSE, glm::value_ptr(m_proj));
 	glActiveTexture(GL_TEXTURE0 + m_textureUnit);
 	glBindTexture(GL_TEXTURE_2D, m_texture->getTextureId());
-	glBindVertexArray(m_vaoCube);
+	glBindVertexArray(m_vao);
 	glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_cubeIndices.size()), GL_UNSIGNED_INT, 0);
 }
 

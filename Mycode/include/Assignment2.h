@@ -46,7 +46,7 @@ private:
 	Texture *m_texture = nullptr;
 	GLuint m_textureUnit = 0;
 
-	GLuint m_vaoCube, m_vboCube, m_eboCube;
+	GLuint m_vao, m_vbo, m_ebo;
 	glm::mat4 m_view;
 	glm::mat4 m_proj;
 	glm::mat4 m_modelCube;
