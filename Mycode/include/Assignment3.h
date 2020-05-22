@@ -1,5 +1,6 @@
 #ifndef __ASSIGNMENT3_H__
 #define __ASSIGNMENT3_H__
+#include <vector>
 #include "cg-sources/scene.h"
 #include "cg-sources/shaderprogram.h"
 #include "cg-sources/texture.h"
@@ -7,7 +8,7 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "camera.h"
 #include "vertex.h"
-#include <vector>
+#include "cube.h"
 
 class Assignment_3 : public Scene {
 
@@ -30,6 +31,9 @@ private:
 
 	glm::mat4 m_modelCube;
 	glm::mat4 m_modelCube2;
+
+	Cube m_cube;
+	Cube m_cube2;
 
 	GLuint m_vaoCube, m_vboCube, m_eboCube;
 	GLuint m_vaoCube2, m_vboCube2, m_eboCube2;

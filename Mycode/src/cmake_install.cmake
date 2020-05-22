@@ -1,4 +1,4 @@
-# Install script for directory: D:/projects/computer_graphics-uni/Mycode/src
+# Install script for directory: K:/computer_graphics-uni/Mycode/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,52 +27,47 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/projects/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
+     "K:/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "D:/projects/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "D:/projects/computer_graphics-uni/bin/x64/Debug/computer_graphics.exe")
+file(INSTALL DESTINATION "K:/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "K:/computer_graphics-uni/bin/x64/Debug/computer_graphics.exe")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/projects/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
+     "K:/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "D:/projects/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "D:/projects/computer_graphics-uni/bin/x64/Release/computer_graphics.exe")
+file(INSTALL DESTINATION "K:/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "K:/computer_graphics-uni/bin/x64/Release/computer_graphics.exe")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/projects/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
+     "K:/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "D:/projects/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "D:/projects/computer_graphics-uni/bin/x64/MinSizeRel/computer_graphics.exe")
+file(INSTALL DESTINATION "K:/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "K:/computer_graphics-uni/bin/x64/MinSizeRel/computer_graphics.exe")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "D:/projects/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
+     "K:/computer_graphics-uni/bin/x64/_install/computer_graphics.exe")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
     if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
         message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
-file(INSTALL DESTINATION "D:/projects/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "D:/projects/computer_graphics-uni/bin/x64/RelWithDebInfo/computer_graphics.exe")
+file(INSTALL DESTINATION "K:/computer_graphics-uni/bin/x64/_install" TYPE EXECUTABLE FILES "K:/computer_graphics-uni/bin/x64/RelWithDebInfo/computer_graphics.exe")
   endif()
 endif()
 
