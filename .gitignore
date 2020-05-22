@@ -277,3 +277,8 @@ cmake_install.cmake
 
 bins/
 lib/
+
+stdout.txt
+**/stdout.txt
+stderr.txt
+**/stderr.txt
