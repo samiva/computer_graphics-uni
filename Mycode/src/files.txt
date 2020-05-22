@@ -1,5 +1,7 @@
 Assignment2.cpp
 Assignment3.cpp
 camera.cpp
+cube.cpp
 helpers.cpp
 MonkeyScene.cpp
+object.cpp

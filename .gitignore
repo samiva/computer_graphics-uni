@@ -11,6 +11,7 @@
 *.sln
 *.vcxproj
 *.vcxproj.filters
+*.vcxproj.user
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -271,6 +272,13 @@ CMakeFiles/
 **/CMakeFiles/
 CMakeCache.txt
 **/CMakeCache.txt
+cmake_install.cmake
+**/cmake_install.cmake
 
 bins/
 lib/
+
+stdout.txt
+**/stdout.txt
+stderr.txt
+**/stderr.txt
