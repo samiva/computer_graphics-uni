@@ -1,10 +1,11 @@
 #include "../include/MonkeyScene.h"
 #include "../../cg-sources/objparser.h"
+#include "../include/helpers.h"
 #include <iostream>
 
 void MonkeyScene::loadMonkey()
 {
-	m_obj.load("../models/monkey.obj");
+	m_obj.load("../../models/monkey.obj");
 	std::cout << "------------MONKEY SCENE-----------------" << std::endl;
 	auto it = m_obj.objVertexSet.begin();
 	auto vb = it->second.vertexBuffers[0];
@@ -65,9 +66,10 @@ MonkeyScene::~MonkeyScene()
 
 bool MonkeyScene::init()
 {
-	loadMonkey();
+	
 	// Load shader program used in this example
-	if (!shaderProgram.load("data/monkey.vs", "data/monkey.fs"))
+	auto shaders = getShaderPaths("Lightning");
+	if (!shaderProgram.load(shaders[0], shaders[1]))
 		return false;
 
 
