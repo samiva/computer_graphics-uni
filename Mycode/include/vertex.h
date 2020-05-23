@@ -20,5 +20,7 @@ struct Vertex {
 		texcoord[0] = tex.x;
 		texcoord[1] = tex.y;
 	}
+
+	Vertex(glm::vec3 pos, glm::vec3 norm) : Vertex(pos, norm, {0,0}) {}
 };
 #endif // !__VERTEX_H__

@@ -31,7 +31,7 @@ void MonkeyScene::loadMonkey()
 
 	}
 	for (int i = 0; i < vb.pos.size(); ++i) {
-		m_cubeVertices.push_back(Vertex(vb.pos[i].x, vb.pos[i].y, vb.pos[i].z, vb.normal[i].x, vb.normal[i].y, vb.normal[i].z));
+		m_cubeVertices.push_back(Vertex(static_cast<glm::vec3>(vb.pos[i]), vb.normal[i]));
 	}
 	//m_vertices = vb.pos;
 	m_cubeIndices = vb.indices;
@@ -68,7 +68,7 @@ bool MonkeyScene::init()
 {
 	
 	// Load shader program used in this example
-	auto shaders = getShaderPaths("Lightning");
+	auto shaders = getShaderPaths("Lighting");
 	if (!shaderProgram.load(shaders[0], shaders[1]))
 		return false;
 
@@ -88,48 +88,49 @@ bool MonkeyScene::init()
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+	m_cube.create();
 	// Allocate and assign a Vertex Array Object to our handle
-	glGenVertexArrays(1, &vao);
+	//glGenVertexArrays(1, &vao);
 
-	// Bind our Vertex Array Object as the currently used object
-	// VAO will hold the state of our IBO and VBO below. Also any
-	// settings selected for these buffer objects will be part of the VAO state as well.
-	glBindVertexArray(vao);
+	//// Bind our Vertex Array Object as the currently used object
+	//// VAO will hold the state of our IBO and VBO below. Also any
+	//// settings selected for these buffer objects will be part of the VAO state as well.
+	//glBindVertexArray(vao);
 
-	// Create Index Buffer Object
-	glGenBuffers(1, &ebo);
+	//// Create Index Buffer Object
+	//glGenBuffers(1, &ebo);
 
-	// Bind our Index Buffer Object
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	//// Bind our Index Buffer Object
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 
-	// Store our index values in Index Buffer Object
-	// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
+	//// Store our index values in Index Buffer Object
+	//// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
+	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
 
-	// Allocate and assign One Vertex Buffer Object to our handle
-	glGenBuffers(1, &vbo);
+	//// Allocate and assign One Vertex Buffer Object to our handle
+	//glGenBuffers(1, &vbo);
 
-	// Bind our VBO as being the active buffer and storing vertex attributes (coordinates + colors)
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	//// Bind our VBO as being the active buffer and storing vertex attributes (coordinates + colors)
+	//glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
-	// Copy the vertex data from tetrahedron to our buffer
-	// 12 * sizeof(GLfloat) is the size of the tetrahedrom array, since it contains 12 Vertex values
-	// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
-	glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
+	//// Copy the vertex data from tetrahedron to our buffer
+	//// 12 * sizeof(GLfloat) is the size of the tetrahedrom array, since it contains 12 Vertex values
+	//// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
+	//glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
 
-	// Note: The following attribute indexes must match what is defined in shader (in shaderprogram.cpp) for glBindAttribLocation() calls!
+	//// Note: The following attribute indexes must match what is defined in shader (in shaderprogram.cpp) for glBindAttribLocation() calls!
 
-	// Specify that our coordinate data is going into attribute index 0 (shaderProgram.getPositionAttribLocation()), and contains three doubles per vertex
-	// Note stride = sizeof ( struct Vertex ) and pointer = ( const GLvoid* ) 0
-	glVertexAttribPointer(shaderProgram.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, position)));
+	//// Specify that our coordinate data is going into attribute index 0 (shaderProgram.getPositionAttribLocation()), and contains three doubles per vertex
+	//// Note stride = sizeof ( struct Vertex ) and pointer = ( const GLvoid* ) 0
+	//glVertexAttribPointer(shaderProgram.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, position)));
 
-	// Enable attribute index 0 as being used
-	glEnableVertexAttribArray(shaderProgram.getPositionAttribLocation());
+	//// Enable attribute index 0 as being used
+	//glEnableVertexAttribArray(shaderProgram.getPositionAttribLocation());
 
-	// Normal vertex attribute
-	glVertexAttribPointer(shaderProgram.getNormalAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, normal)));
+	//// Normal vertex attribute
+	//glVertexAttribPointer(shaderProgram.getNormalAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, normal)));
 
-	glEnableVertexAttribArray(shaderProgram.getNormalAttribLocation());
+	//glEnableVertexAttribArray(shaderProgram.getNormalAttribLocation());
 
 	// Our generated VAO is now ready and enabled for use
 	// We could disable by calling glBindVertexArray(0) if we want to work with multiple objects and not use created VAO at the moment.
@@ -137,7 +138,6 @@ bool MonkeyScene::init()
 	// Set up our view matrix that determines camera position in the scene
 	// glm::lookAt replaces old GLU library functionality for creating a projection matrix
 	viewMat = glm::lookAt(glm::vec3(0.0f, 1.5f, 5.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
 	return true;
 }
 
@@ -154,8 +154,8 @@ void MonkeyScene::resize(GLsizei width, GLsizei height)
 void MonkeyScene::update(float timestep)
 {
 	m_yaw += glm::two_pi<float>() * 0.1f * timestep;
-	m_posY = glm::sin(m_counter);
-	m_posZ = glm::cos(m_counter);
+	//m_posY = glm::sin(m_counter);
+	//m_posZ = glm::cos(m_counter);
 	m_counter += .001f;
 	
 }
@@ -220,12 +220,14 @@ void MonkeyScene::render()
 	glUniform3fv(lightColorLoc, 1, glm::value_ptr(ambLightColor));
 	
 	// For drawing the cube it needs to be bound using (we never bound anything else to replace that state after init())
-	glBindVertexArray(vao);
+	//glBindVertexArray(vao);
+	m_cube.bind();
 
 	// Count is the number of elements in the array that will form triangles. It is not the number of triangles defined by the array.
 	// When VBOs are in use and GL_ELEMENT_ARRAY_BUFFER is bound, the last parameter (pointer to data) is interpreted as an offset within IBO instead of
 	// actual program memory address.
-	glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_cubeIndices.size()), GL_UNSIGNED_INT, 0);
+	glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_cube.getIndiceCount()), GL_UNSIGNED_INT, 0);
+	m_cube.unbind();
 }
 
 bool MonkeyScene::handleEvent(const SDL_Event & e)

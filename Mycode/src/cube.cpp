@@ -2,40 +2,40 @@
 
 void Cube::create() {
 	// Front
-	m_vertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,1.0f, 1.0f },  { 0,0,1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f },  { 0,0,1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,1.0f, 1.0f },   { 0,0,1.0f }, { 0,0 }));
 
 	// Back
-	m_vertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,-1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,-1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,-1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,-1.0f }, { 0,0 }));
 
 	// Right
-	m_vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 1.0f,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 1.0f,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 1.0f,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 1.0f,0,0 }, { 0,0 }));
 
 	// Left
-	m_vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { -1.0f,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { -1.0f,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { -1.0f,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { -1.0f,0,0 }, { 0,0 }));
 
 	// Top
-	m_vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f },  { 0,1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f },  { 0,1.0f,0 }, { 0,0 }));
 
 	// Bottom
-	m_vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,-1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,-1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f },  { 0,-1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f },  { 0,-1.0f,0 }, { 0,0 }));
 
 	// indices
 	// Front
@@ -83,24 +83,28 @@ void Cube::create() {
 	glCreateVertexArrays(1,&m_vao);
 	glBindVertexArray(m_vao);
 
-	glCreateBuffers(GL_ARRAY_BUFFER, &m_vbo);
+	glGenBuffers(1, &m_vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 	glBufferData(GL_ARRAY_BUFFER, m_vertices.size()*sizeof(Vertex),&m_vertices[0],GL_STATIC_DRAW);
 
-	glCreateBuffers(GL_ELEMENT_ARRAY_BUFFER, &m_ebo);
+	glGenBuffers(1, &m_ebo);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size()*sizeof(unsigned int),&m_indices[0], GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
+	glVertexAttribPointer(2,3,GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex,normal)));
+	glEnableVertexAttribArray(0);
+	glEnableVertexAttribArray(2);
 	glBindVertexArray(0);
 }
 
 void Cube::bind()
 {
 	glBindVertexArray(m_vao);
-	glEnableVertexAttribArray(0);
+	//glEnableVertexAttribArray(0);
 }
 
 void Cube::unbind()
 {
 	glBindVertexArray(0);
-	glDisableVertexAttribArray(0);
+	//glDisableVertexAttribArray(0);
 }
