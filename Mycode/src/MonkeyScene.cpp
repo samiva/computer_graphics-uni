@@ -80,7 +80,7 @@ bool MonkeyScene::init()
 	glClearColor(0.2f, 0.3f, 0.1f, 1.f);
 
 	glEnable(GL_DEPTH_TEST);
-	//glEnable(GL_CULL_FACE);
+	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	glDepthFunc(GL_LESS);
 
@@ -137,7 +137,8 @@ bool MonkeyScene::init()
 
 	// Set up our view matrix that determines camera position in the scene
 	// glm::lookAt replaces old GLU library functionality for creating a projection matrix
-	viewMat = glm::lookAt(glm::vec3(0.0f, 1.5f, 5.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+	m_viewPos = { 0.0f, 0.0f, 5.0f };
+	viewMat = glm::lookAt(m_viewPos, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	return true;
 }
 
@@ -166,16 +167,15 @@ void MonkeyScene::render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// Calculate model transformation
-	auto T = glm::translate(glm::mat4(), glm::vec3(0, m_posY, m_posZ));
+	auto T = glm::translate(glm::mat4(), glm::vec3(0, 0,0));
 	auto R = glm::rotate(glm::mat4(), m_yaw, glm::vec3(0.0, 1.0, 0.0)); // Rotate object around y-axis
 	auto modelMat = T * R;
 
 	// Select correct shader program for this object (we never selected anything else to replace that state after init())
 	glUseProgram(shaderProgram.getShaderProgram());
 
-	glm::vec4 viewPos(0.0f, 1.0f, 5.0f, 1.0f);
 	auto modelviewMat = viewMat * modelMat;
-	glm::vec4 lightPos(2.0f, 2.0f, 3.0f, 1.0f);
+	glm::vec4 lightPos(2.0f, 0.0f, 10.0f, 1.0f);
 	auto lightInView = viewMat * lightPos;
 
 
@@ -189,8 +189,8 @@ void MonkeyScene::render()
 	glm::vec4 mDiffuse(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mSpecular(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mEmission(0.0, 0.3, 0.3, 1.0);
-	float mShininess = 10;
-
+	float mShininess = 16;
+	
 	glm::vec4 ambientProduct = lAmbient * mAmbient;
 	glm::vec4 diffuseProduct = lDiffuse * mDiffuse;
 	glm::vec4 specularProduct = lSpecular * mSpecular;
@@ -204,8 +204,12 @@ void MonkeyScene::render()
 	glUniform1fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "mShininess"), 1, &mShininess);
 	glUniform3fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "color"), 1, glm::value_ptr(color));
 
+	glUniform4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "viewpos"), 1, glm::value_ptr(m_viewPos));
+	
 	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "modelview"), 1, GL_FALSE, glm::value_ptr(modelviewMat));
-	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(),"projection"), 1, GL_FALSE, glm::value_ptr(projectionMat));
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(),"_proj"), 1, GL_FALSE, glm::value_ptr(projectionMat));
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "_view"), 1, GL_FALSE, glm::value_ptr(viewMat));
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "_model"), 1, GL_FALSE, glm::value_ptr(modelMat));
 	
 	
 	glUniform4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "lightPos"), 1, glm::value_ptr(lightInView));

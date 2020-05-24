@@ -21,7 +21,7 @@ void main(void) {
     vec4 diffuse = diffuseCoef*diffuseProduct;
 
     // Calculate specular
-    vec3 viewDir = normalize(-FragPos); // normalize(viewpos.xyz - FragPos); // E
+    vec3 viewDir = normalize(viewpos.xyz-FragPos); // normalize(viewpos.xyz - FragPos); // E
     vec3 halfVec = normalize(lightVector.xyz+viewDir); //reflect(-lightVector.xyz, norm); // H
     float spec = pow(max(dot(norm, halfVec),0.0), mShininess);
     vec4 specular = spec * specularProduct;

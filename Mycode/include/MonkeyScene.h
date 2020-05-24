@@ -43,7 +43,7 @@ private:
 
 	glm::mat4 projectionMat;
 	glm::mat4 viewMat;
-	glm::mat4 R;
+	glm::vec3 m_viewPos;
 
 	float m_yaw = 0;
 	float m_posX = 0.0f;

@@ -4,14 +4,14 @@ void Cube::create() {
 	// Front
 	m_vertices.push_back(Vertex({ -1.0f,1.0f, 1.0f },  { 0,0,1.0f }, { 0,0 }));
 	m_vertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,1.0f }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f },  { 0,0,1.0f }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,1.0f, 1.0f },   { 0,0,1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f,-1.0f, 1.0f }, { 0,0,1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f,1.0f, 1.0f },  { 0,0,1.0f }, { 0,0 }));
 
 	// Back
 	m_vertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,-1.0f }, { 0,0 }));
 	m_vertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,-1.0f }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,-1.0f }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,-1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f,-1.0f,  -1.0f },{ 0,0,-1.0f }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f,1.0f,   -1.0f },{ 0,0,-1.0f }, { 0,0 }));
 
 	// Right
 	m_vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 1.0f,0,0 }, { 0,0 }));
@@ -28,14 +28,14 @@ void Cube::create() {
 	// Top
 	m_vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,1.0f,0 }, { 0,0 }));
 	m_vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,1.0f,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f },  { 0,1.0f,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f },  { 0,1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f,  1.0f,  1.0f }, { 0,1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f,  1.0f, -1.0f }, { 0,1.0f,0 }, { 0,0 }));
 
 	// Bottom
 	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,-1.0f,0 }, { 0,0 }));
 	m_vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,-1.0f,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f },  { 0,-1.0f,0 }, { 0,0 }));
-	m_vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f },  { 0,-1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f, -1.0f, -1.0f }, { 0,-1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({  1.0f, -1.0f,  1.0f }, { 0,-1.0f,0 }, { 0,0 }));
 
 	// indices
 	// Front
