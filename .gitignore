@@ -282,3 +282,6 @@ stdout.txt
 **/stdout.txt
 stderr.txt
 **/stderr.txt
+
+# Revese ignore .obj in models
+!models/*.obj
