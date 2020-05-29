@@ -7,6 +7,7 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "camera.h"
 #include "vertex.h"
+#include "../include/cube.h"
 #include <vector>
 
 class Assignment_3 : public Scene {
@@ -30,6 +31,8 @@ private:
 
 	glm::mat4 m_modelCube;
 	glm::mat4 m_modelCube2;
+	Cube m_sun;
+	Cube m_mercurius;
 
 	float m_yaw = 0;
 

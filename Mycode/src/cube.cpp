@@ -1,4 +1,5 @@
 #include "../include/cube.h"
+#include <iostream>
 
 void Cube::create() {
 	// Front
@@ -32,8 +33,8 @@ void Cube::create() {
 	m_vertices.push_back(Vertex({  1.0f,  1.0f, -1.0f }, { 0,1.0f,0 }, { 0,0 }));
 
 	// Bottom
-	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,-1.0f,0 }, { 0,0 }));
 	m_vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,-1.0f,0 }, { 0,0 }));
+	m_vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,-1.0f,0 }, { 0,0 }));
 	m_vertices.push_back(Vertex({  1.0f, -1.0f, -1.0f }, { 0,-1.0f,0 }, { 0,0 }));
 	m_vertices.push_back(Vertex({  1.0f, -1.0f,  1.0f }, { 0,-1.0f,0 }, { 0,0 }));
 
@@ -107,4 +108,23 @@ void Cube::unbind()
 {
 	glBindVertexArray(0);
 	//glDisableVertexAttribArray(0);
+}
+
+void Cube::update(float dt)
+{
+	
+	//bool kakka = glm::all(glm::notEqual(m_moveDir, glm::vec3(0.0f)));
+	if (glm::length(m_moveDir)!=0.0f) {
+		m_position += m_moveDir*dt*10.0f;
+		updateModel();
+	}
+	if (glm::length(m_rotAxis)!=0.0f) {
+		m_rotation += m_rotAxis * dt*5.0f;
+		updateModel();
+	}
+}
+
+void Cube::updateModel()
+{
+	m_model = getGlobalTransform();
 }

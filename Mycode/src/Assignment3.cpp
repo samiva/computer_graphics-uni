@@ -29,6 +29,7 @@ Assignment_3::Assignment_3()
 bool Assignment_3::init()
 {
 	createCube();
+	m_mercurius.translate({ -10, 0, 0 });
 	auto cubeShaders = getShaderPaths("BasicShader");
 	if (!m_shaderCube.load(cubeShaders[0], cubeShaders[1])) {
 		return false;
@@ -37,34 +38,34 @@ bool Assignment_3::init()
 	SDL_SetRelativeMouseMode(SDL_TRUE);
 
 	// Cube
-	glGenVertexArrays(1, &m_vao);
-	glBindVertexArray(m_vao);
+	//glGenVertexArrays(1, &m_vao);
+	//glBindVertexArray(m_vao);
 
-	glGenBuffers(1, &m_vbo);
-	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-	glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
+	//glGenBuffers(1, &m_vbo);
+	//glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
+	//glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
 
-	glGenBuffers(1, &m_ebo);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
+	//glGenBuffers(1, &m_ebo);
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
+	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
 
-	glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
-	glEnableVertexAttribArray(m_shaderCube.getPositionAttribLocation());
+	//glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
+	//glEnableVertexAttribArray(m_shaderCube.getPositionAttribLocation());
 
-	// Cube2
-	glGenVertexArrays(1, &m_vaoCube2);
-	glBindVertexArray(m_vaoCube2);
+	//// Cube2
+	//glGenVertexArrays(1, &m_vaoCube2);
+	//glBindVertexArray(m_vaoCube2);
 
-	glGenBuffers(1, &m_vboCube2);
-	glBindBuffer(GL_ARRAY_BUFFER, m_vboCube2);
-	glBufferData(GL_ARRAY_BUFFER, m_cube2Vertices.size() * sizeof(Vertex), &m_cube2Vertices[0], GL_STATIC_DRAW);
+	//glGenBuffers(1, &m_vboCube2);
+	//glBindBuffer(GL_ARRAY_BUFFER, m_vboCube2);
+	//glBufferData(GL_ARRAY_BUFFER, m_cube2Vertices.size() * sizeof(Vertex), &m_cube2Vertices[0], GL_STATIC_DRAW);
 
-	glGenBuffers(1, &m_eboCube2);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_eboCube2);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cube2Indices.size() * sizeof(unsigned int), &m_cube2Indices[0], GL_STATIC_DRAW);
+	//glGenBuffers(1, &m_eboCube2);
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_eboCube2);
+	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cube2Indices.size() * sizeof(unsigned int), &m_cube2Indices[0], GL_STATIC_DRAW);
 
-	glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
-	glEnableVertexAttribArray(m_shaderCube.getPositionAttribLocation());
+	//glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
+	//glEnableVertexAttribArray(m_shaderCube.getPositionAttribLocation());
 
 	// Skybox
 	auto skyShaderPaths = getShaderPaths("SkyboxShader");
@@ -112,8 +113,16 @@ void Assignment_3::resize(GLsizei width, GLsizei height)
 
 void Assignment_3::update(float timestep)
 {
-	m_camera.update(timestep);
+
+	auto rot = m_mercurius.getRotation();
 	m_yaw += glm::two_pi<float>() * 0.1f * timestep;
+	rot.y = m_yaw;
+	m_mercurius.rotate(rot);
+
+	m_camera.update(timestep);
+	m_sun.update(timestep);
+	m_mercurius.update(timestep);
+
 }
 
 void Assignment_3::render()
@@ -121,29 +130,37 @@ void Assignment_3::render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glUseProgram(m_shaderCube.getShaderProgram());
 
-	auto T = glm::translate(glm::mat4(1.0f), { 0,0,0 });
-	auto Mcube = T;
-	m_modelCube = T;
+	auto Mcube = m_sun.getModel();
+	m_modelCube = Mcube;
 	auto V = m_camera.getView();
 	auto P = m_camera.getProj();
 
+	glm::vec3 colorSun(.5f,.5f,0.0f);
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+	glUniform3fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_objectColor"),1,glm::value_ptr(colorSun));
 
-	glBindVertexArray(m_vao);
-	glDrawElements(GL_TRIANGLES, m_cubeIndices.size(), GL_UNSIGNED_INT, 0);
+	//glBindVertexArray(m_vao);
+	m_sun.bind();
+	glDrawElements(GL_TRIANGLES, m_sun.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	m_sun.unbind();
 
 	// Draw cube2
 	auto T2 = glm::translate(glm::mat4(), { -10, 0,0 });
 	auto Ry = glm::rotate(glm::mat4(),m_yaw, { 0,1,0 });
-	m_modelCube2 = Mcube* Ry*T2;
+	m_modelCube2 = Mcube * m_mercurius.getLocalTransform();
+
+	glm::vec3 colorMercurius(.5f,.01f,.01f);
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+	glUniform3fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_objectColor"), 1, glm::value_ptr(colorMercurius));
 
-	glBindVertexArray(m_vaoCube2);
-	glDrawElements(GL_TRIANGLES, m_cube2Indices.size(), GL_UNSIGNED_INT, 0);
+	//glBindVertexArray(m_vaoCube2);
+	m_mercurius.bind();
+	glDrawElements(GL_TRIANGLES, m_mercurius.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	m_mercurius.unbind();
 
 	glUseProgram(m_shaderSkybox.getShaderProgram());
 
@@ -204,6 +221,13 @@ bool Assignment_3::handleEvent(const SDL_Event & e)
 			//m_camera.setRotationPitch(-1.0f);
 			//m_camera.rotPitch(-1.0f);
 			break;
+		// Move the sun
+		case SDLK_x:
+			m_sun.setMove(glm::vec3(0.0f, 1.0f, 0.0f));
+			break;
+		case SDLK_z:
+			m_sun.setMove(glm::vec3(0.0f, -1.0f, 0.0f));
+			break;
 		
 		case SDLK_ESCAPE:
 			return false;
@@ -225,6 +249,10 @@ bool Assignment_3::handleEvent(const SDL_Event & e)
 			m_camera.setMoveVertical(0.0f);
 			//m_camera.setRotationPitch(0.0f);
 			break;
+		// Stop moving the sun
+		case SDLK_x: case SDLK_z:
+			m_sun.setMove(Object::ZERO_VECTOR3);
+			break;
 		}
 	}
 
@@ -233,85 +261,87 @@ bool Assignment_3::handleEvent(const SDL_Event & e)
 
 void Assignment_3::createCube()
 {
+	m_sun.create();
+	m_mercurius.create();
 	// Front
-	m_cubeVertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Back
-	m_cubeVertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Back
+	//m_cubeVertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Right
-	m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Right
+	//m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Left
-	m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Left
+	//m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Top
-	m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Top
+	//m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Bottom
-	m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Bottom
+	//m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cubeVertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// indices
-	// Front
-	m_cubeIndices.push_back(0);
-	m_cubeIndices.push_back(1);
-	m_cubeIndices.push_back(2);
-	m_cubeIndices.push_back(0);
-	m_cubeIndices.push_back(2);
-	m_cubeIndices.push_back(3);
-	// Back
-	m_cubeIndices.push_back(4);
-	m_cubeIndices.push_back(7);
-	m_cubeIndices.push_back(6);
-	m_cubeIndices.push_back(4);
-	m_cubeIndices.push_back(6);
-	m_cubeIndices.push_back(5);
-	// Right
-	m_cubeIndices.push_back(8);
-	m_cubeIndices.push_back(9);
-	m_cubeIndices.push_back(10);
-	m_cubeIndices.push_back(8);
-	m_cubeIndices.push_back(10);
-	m_cubeIndices.push_back(11);
-	// Left
-	m_cubeIndices.push_back(12);
-	m_cubeIndices.push_back(13);
-	m_cubeIndices.push_back(14);
-	m_cubeIndices.push_back(12);
-	m_cubeIndices.push_back(14);
-	m_cubeIndices.push_back(15);
-	// Top
-	m_cubeIndices.push_back(16);
-	m_cubeIndices.push_back(17);
-	m_cubeIndices.push_back(18);
-	m_cubeIndices.push_back(16);
-	m_cubeIndices.push_back(18);
-	m_cubeIndices.push_back(19);
-	// Bottom
-	m_cubeIndices.push_back(20);
-	m_cubeIndices.push_back(21);
-	m_cubeIndices.push_back(22);
-	m_cubeIndices.push_back(20);
-	m_cubeIndices.push_back(22);
-	m_cubeIndices.push_back(23);
+	//// indices
+	//// Front
+	//m_cubeIndices.push_back(0);
+	//m_cubeIndices.push_back(1);
+	//m_cubeIndices.push_back(2);
+	//m_cubeIndices.push_back(0);
+	//m_cubeIndices.push_back(2);
+	//m_cubeIndices.push_back(3);
+	//// Back
+	//m_cubeIndices.push_back(4);
+	//m_cubeIndices.push_back(7);
+	//m_cubeIndices.push_back(6);
+	//m_cubeIndices.push_back(4);
+	//m_cubeIndices.push_back(6);
+	//m_cubeIndices.push_back(5);
+	//// Right
+	//m_cubeIndices.push_back(8);
+	//m_cubeIndices.push_back(9);
+	//m_cubeIndices.push_back(10);
+	//m_cubeIndices.push_back(8);
+	//m_cubeIndices.push_back(10);
+	//m_cubeIndices.push_back(11);
+	//// Left
+	//m_cubeIndices.push_back(12);
+	//m_cubeIndices.push_back(13);
+	//m_cubeIndices.push_back(14);
+	//m_cubeIndices.push_back(12);
+	//m_cubeIndices.push_back(14);
+	//m_cubeIndices.push_back(15);
+	//// Top
+	//m_cubeIndices.push_back(16);
+	//m_cubeIndices.push_back(17);
+	//m_cubeIndices.push_back(18);
+	//m_cubeIndices.push_back(16);
+	//m_cubeIndices.push_back(18);
+	//m_cubeIndices.push_back(19);
+	//// Bottom
+	//m_cubeIndices.push_back(20);
+	//m_cubeIndices.push_back(21);
+	//m_cubeIndices.push_back(22);
+	//m_cubeIndices.push_back(20);
+	//m_cubeIndices.push_back(22);
+	//m_cubeIndices.push_back(23);
 
 	// Skybox
 	// Front
@@ -397,84 +427,84 @@ void Assignment_3::createCube()
 
 	// Cube 2
 	// Front
-	m_cube2Vertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Back
-	m_cube2Vertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Back
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,-1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,-1.0f,  -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,1.0f,   -1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Right
-	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Right
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Left
-	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Left
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Top
-	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Top
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f,  1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// Bottom
-	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
-	m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//// Bottom
+	//m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ -1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f, -1.0f }, { 0,0,0 }, { 0,0 }));
+	//m_cube2Vertices.push_back(Vertex({ 1.0f, -1.0f,  1.0f }, { 0,0,0 }, { 0,0 }));
 
-	// indices
-	// Front
-	m_cube2Indices.push_back(0);
-	m_cube2Indices.push_back(1);
-	m_cube2Indices.push_back(2);
-	m_cube2Indices.push_back(0);
-	m_cube2Indices.push_back(2);
-	m_cube2Indices.push_back(3);
-	// Back
-	m_cube2Indices.push_back(4);
-	m_cube2Indices.push_back(7);
-	m_cube2Indices.push_back(6);
-	m_cube2Indices.push_back(4);
-	m_cube2Indices.push_back(6);
-	m_cube2Indices.push_back(5);
-	// Right
-	m_cube2Indices.push_back(8);
-	m_cube2Indices.push_back(9);
-	m_cube2Indices.push_back(10);
-	m_cube2Indices.push_back(8);
-	m_cube2Indices.push_back(10);
-	m_cube2Indices.push_back(11);
-	// Left
-	m_cube2Indices.push_back(12);
-	m_cube2Indices.push_back(13);
-	m_cube2Indices.push_back(14);
-	m_cube2Indices.push_back(12);
-	m_cube2Indices.push_back(14);
-	m_cube2Indices.push_back(15);
-	// Top
-	m_cube2Indices.push_back(16);
-	m_cube2Indices.push_back(17);
-	m_cube2Indices.push_back(18);
-	m_cube2Indices.push_back(16);
-	m_cube2Indices.push_back(18);
-	m_cube2Indices.push_back(19);
-	// Bottom
-	m_cube2Indices.push_back(20);
-	m_cube2Indices.push_back(21);
-	m_cube2Indices.push_back(22);
-	m_cube2Indices.push_back(20);
-	m_cube2Indices.push_back(22);
-	m_cube2Indices.push_back(23);
+	//// indices
+	//// Front
+	//m_cube2Indices.push_back(0);
+	//m_cube2Indices.push_back(1);
+	//m_cube2Indices.push_back(2);
+	//m_cube2Indices.push_back(0);
+	//m_cube2Indices.push_back(2);
+	//m_cube2Indices.push_back(3);
+	//// Back
+	//m_cube2Indices.push_back(4);
+	//m_cube2Indices.push_back(7);
+	//m_cube2Indices.push_back(6);
+	//m_cube2Indices.push_back(4);
+	//m_cube2Indices.push_back(6);
+	//m_cube2Indices.push_back(5);
+	//// Right
+	//m_cube2Indices.push_back(8);
+	//m_cube2Indices.push_back(9);
+	//m_cube2Indices.push_back(10);
+	//m_cube2Indices.push_back(8);
+	//m_cube2Indices.push_back(10);
+	//m_cube2Indices.push_back(11);
+	//// Left
+	//m_cube2Indices.push_back(12);
+	//m_cube2Indices.push_back(13);
+	//m_cube2Indices.push_back(14);
+	//m_cube2Indices.push_back(12);
+	//m_cube2Indices.push_back(14);
+	//m_cube2Indices.push_back(15);
+	//// Top
+	//m_cube2Indices.push_back(16);
+	//m_cube2Indices.push_back(17);
+	//m_cube2Indices.push_back(18);
+	//m_cube2Indices.push_back(16);
+	//m_cube2Indices.push_back(18);
+	//m_cube2Indices.push_back(19);
+	//// Bottom
+	//m_cube2Indices.push_back(20);
+	//m_cube2Indices.push_back(21);
+	//m_cube2Indices.push_back(22);
+	//m_cube2Indices.push_back(20);
+	//m_cube2Indices.push_back(22);
+	//m_cube2Indices.push_back(23);
 }
 
 void Assignment_3::createCubeMap(std::vector<std::string> filePaths)

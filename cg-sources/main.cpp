@@ -184,9 +184,9 @@ int main(int argc, char **argv)
 		std::cerr << "OpenGL Errors detected during SDL initialization" << std::endl;
 		return -1;
 	}
-	//Assignment_3 scene;
+	Assignment_3 scene;
 	//Assignment_2 scene;
-	MonkeyScene scene;
+	//MonkeyScene scene;
 	//ExampleScene1 scene; // A tetrahedron with vertex colors
 	//ExampleScene2 scene; // A texturemapped cube
 	//ExampleScene3 scene; // A shaded sphere (shading calculated to vertex colors)

@@ -155,9 +155,9 @@ void MonkeyScene::resize(GLsizei width, GLsizei height)
 void MonkeyScene::update(float timestep)
 {
 	m_yaw += glm::two_pi<float>() * 0.1f * timestep;
-	//m_posY = glm::sin(m_counter);
-	//m_posZ = glm::cos(m_counter);
-	m_counter += .001f;
+	m_posY = glm::sin(m_counter);
+	m_posZ = glm::cos(m_counter);
+	m_counter += 1.0f*timestep;
 	
 }
 
@@ -167,7 +167,7 @@ void MonkeyScene::render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// Calculate model transformation
-	auto T = glm::translate(glm::mat4(), glm::vec3(0, 0,0));
+	auto T = glm::translate(glm::mat4(), glm::vec3(0, m_posY, m_posZ));
 	auto R = glm::rotate(glm::mat4(), m_yaw, glm::vec3(0.0, 1.0, 0.0)); // Rotate object around y-axis
 	auto modelMat = T * R;
 
@@ -189,7 +189,7 @@ void MonkeyScene::render()
 	glm::vec4 mDiffuse(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mSpecular(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mEmission(0.0, 0.3, 0.3, 1.0);
-	float mShininess = 16;
+	float mShininess = 32;
 	
 	glm::vec4 ambientProduct = lAmbient * mAmbient;
 	glm::vec4 diffuseProduct = lDiffuse * mDiffuse;
