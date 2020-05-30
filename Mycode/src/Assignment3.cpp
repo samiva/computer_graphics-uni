@@ -29,9 +29,14 @@ Assignment_3::Assignment_3()
 bool Assignment_3::init()
 {
 	createCube();
-	m_mercurius.translate({ -10, 0, 0 });
+	m_mercurius.translate({ -15, 0, 0 });
 	auto cubeShaders = getShaderPaths("BasicShader");
 	if (!m_shaderCube.load(cubeShaders[0], cubeShaders[1])) {
+		return false;
+	}
+
+	auto lightingShaders = getShaderPaths("Lighting_ass3");
+	if (!m_lightingShader.load(lightingShaders[0], lightingShaders[1])) {
 		return false;
 	}
 
@@ -152,10 +157,45 @@ void Assignment_3::render()
 	m_modelCube2 = Mcube * m_mercurius.getLocalTransform();
 
 	glm::vec3 colorMercurius(.5f,.01f,.01f);
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
-	glUniform3fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_objectColor"), 1, glm::value_ptr(colorMercurius));
+
+	/* *********************
+	Lighting shader
+	************************/
+
+	glUseProgram(m_lightingShader.getShaderProgram());
+	// light properties
+	glm::vec4 lAmbient(0.2, 0.2, 0.2, 1.0);
+	glm::vec4 lDiffuse(1.0, 1.0, 1.0, 1.0);
+	glm::vec4 lSpecular(1.0);
+
+	// Material propertries
+	glm::vec4 mAmbient(1.0, 0.0, 1.0, 1.0);
+	glm::vec4 mDiffuse(1.0, 0.8, 0.0, 1.0);
+	glm::vec4 mSpecular(1.0, 0.8, 0.0, 1.0);
+	glm::vec4 mEmission(0.0, 0.3, 0.3, 1.0);
+	float mShininess = 32;
+
+	glm::vec4 ambientProduct = lAmbient * mAmbient;
+	glm::vec4 diffuseProduct = lDiffuse * mDiffuse;
+	glm::vec4 specularProduct = lSpecular * mSpecular;
+
+	// lighting
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_ambientProduct"), 1, glm::value_ptr(ambientProduct));
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_diffuseProduct"), 1, glm::value_ptr(diffuseProduct));
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_specularProduct"), 1, glm::value_ptr(specularProduct));
+	glUniform1fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_mShininess"), 1, &mShininess);
+	glUniform3fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_objectColor"), 1, glm::value_ptr(colorMercurius));
+
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_viewpos"), 1, glm::value_ptr(glm::vec4(m_camera.getPosition(),1.0f)));
+
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+
+	// light position in view space
+	auto lightPos = m_sun.getPosition();
+	auto lightInView = m_camera.getView() * glm::vec4(lightPos, 1.0f);
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_lightPos"), 1, glm::value_ptr(lightInView));
 
 	//glBindVertexArray(m_vaoCube2);
 	m_mercurius.bind();

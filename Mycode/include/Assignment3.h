@@ -26,6 +26,7 @@ public:
 private:
 	ShaderProgram m_shaderCube;
 	ShaderProgram m_shaderSkybox;
+	ShaderProgram m_lightingShader;
 
 	Camera m_camera;
 
