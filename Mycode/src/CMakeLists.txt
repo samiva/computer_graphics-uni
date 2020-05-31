@@ -45,7 +45,8 @@ set(CG_SRC ${CG_SOURCE}/debugmessagecallback.cpp
                     ${CG_SOURCE}/objparser.cpp
                     ${CG_SOURCE}/sdlwrapper.cpp
                     ${CG_SOURCE}/shaderprogram.cpp
-                    ${CG_SOURCE}/texture.cpp)
+                    ${CG_SOURCE}/texture.cpp
+		    ${CG_SOURCE}/main.cpp)
 
 
 source_group("include" FILES ${ASSIGNMENT_INCLUDES})

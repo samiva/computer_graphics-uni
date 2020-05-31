@@ -29,23 +29,31 @@ Assignment_3::Assignment_3()
 bool Assignment_3::init()
 {
 	createCube();
+	m_mercurius.translate({ -15, 0, 0 });
+	m_earth.translate({ 0.0f,15.0f,0.0f });
+
 	auto cubeShaders = getShaderPaths("BasicShader");
 	if (!m_shaderCube.load(cubeShaders[0], cubeShaders[1])) {
 		return false;
 	}
 
+	auto lightingShaders = getShaderPaths("Lighting_ass3");
+	if (!m_lightingShader.load(lightingShaders[0], lightingShaders[1])) {
+		return false;
+	}
+
 	SDL_SetRelativeMouseMode(SDL_TRUE);
 
-	//// Cube
-	//glGenVertexArrays(1, &m_vaoCube);
-	//glBindVertexArray(m_vaoCube);
+	// Cube
+	//glGenVertexArrays(1, &m_vao);
+	//glBindVertexArray(m_vao);
 
-	//glGenBuffers(1, &m_vboCube);
-	//glBindBuffer(GL_ARRAY_BUFFER, m_vboCube);
+	//glGenBuffers(1, &m_vbo);
+	//glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 	//glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
 
-	//glGenBuffers(1, &m_eboCube);
-	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_eboCube);
+	//glGenBuffers(1, &m_ebo);
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
 	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
 
 	//glVertexAttribPointer(m_shaderCube.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
@@ -112,38 +120,105 @@ void Assignment_3::resize(GLsizei width, GLsizei height)
 
 void Assignment_3::update(float timestep)
 {
+
+	auto rot = m_mercurius.getRotation();
+	m_yaw += glm::two_pi<float>() * 0.1f * timestep;
+	rot.y = m_yaw;
+	m_mercurius.rotate(rot);
+
+	rot = m_earth.getRotation();
+	m_roll += glm::two_pi<float>() * 0.1f * timestep;
+	rot.z = m_roll;
+	m_earth.rotate(rot);
+
 	m_camera.update(timestep);
+	m_sun.update(timestep);
+	m_mercurius.update(timestep);
+	m_earth.update(timestep);
+
 }
 
 void Assignment_3::render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glCullFace(GL_BACK);
 	glUseProgram(m_shaderCube.getShaderProgram());
 
-	auto T = glm::translate(glm::mat4(1.0f), { 0,0,0 });
-
-	m_modelCube = T;
+	auto Mcube = m_sun.getModel();
+	m_modelCube = Mcube;
 	auto V = m_camera.getView();
 	auto P = m_camera.getProj();
 
+	glm::vec3 colorSun(.5f,.5f,0.0f);
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube));
 	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+	glUniform3fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_objectColor"),1,glm::value_ptr(colorSun));
 
-	//glBindVertexArray(m_vaoCube);
-	m_cube.bind();
-	glDrawElements(GL_TRIANGLES, m_cube.getIndiceCount() , GL_UNSIGNED_INT, 0);
-	m_cube.unbind();
-	// Draw cube2
-	auto T2 = glm::translate(glm::mat4(), { -10, 0,0 });
-	m_modelCube2 = T2;
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
-	glUniformMatrix4fv(glGetUniformLocation(m_shaderCube.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+	//glBindVertexArray(m_vao);
+	m_sun.bind();
+	glDrawElements(GL_TRIANGLES, m_sun.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	m_sun.unbind();
 
-	m_cube2.bind();
-	glDrawElements(GL_TRIANGLES, m_cube2.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	// Draw mercurius
+	
+	m_modelCube2 = Mcube * m_mercurius.getLocalTransform();
 
+	glm::vec3 colorMercurius(.5f,.01f,.01f);
+
+	/* *********************
+	Lighting shader
+	************************/
+
+	glUseProgram(m_lightingShader.getShaderProgram());
+	// light properties
+	glm::vec4 lAmbient(0.2, 0.2, 0.2, 1.0);
+	glm::vec4 lDiffuse(1.0, 1.0, 1.0, 1.0);
+	glm::vec4 lSpecular(1.0);
+
+	// Material propertries
+	glm::vec4 mAmbient(1.0, 0.0, 1.0, 1.0);
+	glm::vec4 mDiffuse(1.0, 0.8, 0.0, 1.0);
+	glm::vec4 mSpecular(1.0, 0.8, 0.0, 1.0);
+	glm::vec4 mEmission(0.0, 0.3, 0.3, 1.0);
+	float mShininess = 32;
+
+	glm::vec4 ambientProduct = lAmbient * mAmbient;
+	glm::vec4 diffuseProduct = lDiffuse * mDiffuse;
+	glm::vec4 specularProduct = lSpecular * mSpecular;
+
+	// lighting
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_ambientProduct"), 1, glm::value_ptr(ambientProduct));
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_diffuseProduct"), 1, glm::value_ptr(diffuseProduct));
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_specularProduct"), 1, glm::value_ptr(specularProduct));
+	glUniform1fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_mShininess"), 1, &mShininess);
+	glUniform3fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_objectColor"), 1, glm::value_ptr(colorMercurius));
+
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_viewpos"), 1, glm::value_ptr(glm::vec4(m_camera.getPosition(),1.0f)));
+
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_viewMat"), 1, GL_FALSE, glm::value_ptr(V));
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelCube2));
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_projMat"), 1, GL_FALSE, glm::value_ptr(P));
+
+	// light position in view space
+	auto lightPos = m_sun.getPosition();
+	auto lightInView = m_camera.getView() * glm::vec4(lightPos, 1.0f);
+	glUniform4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_lightPos"), 1, glm::value_ptr(lightInView));
+
+	//glBindVertexArray(m_vaoCube2);
+	m_mercurius.bind();
+	glDrawElements(GL_TRIANGLES, m_mercurius.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	m_mercurius.unbind();
+
+	// Draw earth
+	m_modelEarth = Mcube * m_earth.getLocalTransform();
+	// Uniforms
+	glm::vec3 colorEarth(.1f,1.0f,.4f);
+	glUniform3fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_objectColor"), 1, glm::value_ptr(colorEarth));
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelEarth));
+	m_earth.bind();
+	glDrawElements(GL_TRIANGLES, m_earth.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	m_earth.unbind();
 	glUseProgram(m_shaderSkybox.getShaderProgram());
 
 	auto M = /*glm::mat4(1.0F);*/ glm::translate(glm::mat4(), glm::vec3(0.0f, 0.0f, 0.0f));
@@ -203,6 +278,13 @@ bool Assignment_3::handleEvent(const SDL_Event & e)
 			//m_camera.setRotationPitch(-1.0f);
 			//m_camera.rotPitch(-1.0f);
 			break;
+		// Move the sun
+		case SDLK_x:
+			m_sun.setMove(glm::vec3(0.0f, 1.0f, 0.0f));
+			break;
+		case SDLK_z:
+			m_sun.setMove(glm::vec3(0.0f, -1.0f, 0.0f));
+			break;
 		
 		case SDLK_ESCAPE:
 			return false;
@@ -224,6 +306,10 @@ bool Assignment_3::handleEvent(const SDL_Event & e)
 			m_camera.setMoveVertical(0.0f);
 			//m_camera.setRotationPitch(0.0f);
 			break;
+		// Stop moving the sun
+		case SDLK_x: case SDLK_z:
+			m_sun.setMove(Object::ZERO_VECTOR3);
+			break;
 		}
 	}
 
@@ -232,9 +318,10 @@ bool Assignment_3::handleEvent(const SDL_Event & e)
 
 void Assignment_3::createCube()
 {
-	m_cube.create();
-	m_cube2.create();
-	//// Front
+	m_sun.create();
+	m_mercurius.create();
+	m_earth.create();
+	// Front
 	//m_cubeVertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
 	//m_cubeVertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
 	//m_cubeVertices.push_back(Vertex({ 1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));

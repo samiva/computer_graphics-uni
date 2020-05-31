@@ -9,5 +9,9 @@ public:
 	virtual void create() override;
 	virtual void bind() override;
 	virtual void unbind() override;
+	virtual void update(float dt) override;
+
+protected:
+	void updateModel();
 };
 #endif // !__CUBE_H__

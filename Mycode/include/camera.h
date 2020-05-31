@@ -9,6 +9,8 @@ public:
 
 	glm::mat4 getView();
 	inline glm::mat4 getProj() { return m_proj; }
+	inline glm::vec3 getPosition() { return m_position; }
+
 	inline void setMoveVertical(float factor) {  m_moveVertical = factor; }
 	inline void setMoveHorizontal(float factor) { m_moveHorizontal = factor; }
 	inline void setRotationYaw(float factor) { m_yawFactor = factor; }

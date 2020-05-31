@@ -1,10 +1,11 @@
 #include "../include/MonkeyScene.h"
 #include "../../cg-sources/objparser.h"
+#include "../include/helpers.h"
 #include <iostream>
 
 void MonkeyScene::loadMonkey()
 {
-	m_obj.load("../models/monkey.obj");
+	m_obj.load("../../models/monkey.obj");
 	std::cout << "------------MONKEY SCENE-----------------" << std::endl;
 	auto it = m_obj.objVertexSet.begin();
 	auto vb = it->second.vertexBuffers[0];
@@ -30,7 +31,7 @@ void MonkeyScene::loadMonkey()
 
 	}
 	for (int i = 0; i < vb.pos.size(); ++i) {
-		m_cubeVertices.push_back(Vertex(vb.pos[i].x, vb.pos[i].y, vb.pos[i].z, vb.normal[i].x, vb.normal[i].y, vb.normal[i].z));
+		m_cubeVertices.push_back(Vertex(static_cast<glm::vec3>(vb.pos[i]), vb.normal[i]));
 	}
 	//m_vertices = vb.pos;
 	m_cubeIndices = vb.indices;
@@ -65,9 +66,10 @@ MonkeyScene::~MonkeyScene()
 
 bool MonkeyScene::init()
 {
-	loadMonkey();
+	
 	// Load shader program used in this example
-	if (!shaderProgram.load("data/monkey.vs", "data/monkey.fs"))
+	auto shaders = getShaderPaths("Lighting");
+	if (!shaderProgram.load(shaders[0], shaders[1]))
 		return false;
 
 
@@ -78,7 +80,7 @@ bool MonkeyScene::init()
 	glClearColor(0.2f, 0.3f, 0.1f, 1.f);
 
 	glEnable(GL_DEPTH_TEST);
-	//glEnable(GL_CULL_FACE);
+	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	glDepthFunc(GL_LESS);
 
@@ -86,56 +88,57 @@ bool MonkeyScene::init()
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+	m_cube.create();
 	// Allocate and assign a Vertex Array Object to our handle
-	glGenVertexArrays(1, &vao);
+	//glGenVertexArrays(1, &vao);
 
-	// Bind our Vertex Array Object as the currently used object
-	// VAO will hold the state of our IBO and VBO below. Also any
-	// settings selected for these buffer objects will be part of the VAO state as well.
-	glBindVertexArray(vao);
+	//// Bind our Vertex Array Object as the currently used object
+	//// VAO will hold the state of our IBO and VBO below. Also any
+	//// settings selected for these buffer objects will be part of the VAO state as well.
+	//glBindVertexArray(vao);
 
-	// Create Index Buffer Object
-	glGenBuffers(1, &ebo);
+	//// Create Index Buffer Object
+	//glGenBuffers(1, &ebo);
 
-	// Bind our Index Buffer Object
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	//// Bind our Index Buffer Object
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 
-	// Store our index values in Index Buffer Object
-	// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
+	//// Store our index values in Index Buffer Object
+	//// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
+	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_cubeIndices.size() * sizeof(unsigned int), &m_cubeIndices[0], GL_STATIC_DRAW);
 
-	// Allocate and assign One Vertex Buffer Object to our handle
-	glGenBuffers(1, &vbo);
+	//// Allocate and assign One Vertex Buffer Object to our handle
+	//glGenBuffers(1, &vbo);
 
-	// Bind our VBO as being the active buffer and storing vertex attributes (coordinates + colors)
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	//// Bind our VBO as being the active buffer and storing vertex attributes (coordinates + colors)
+	//glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
-	// Copy the vertex data from tetrahedron to our buffer
-	// 12 * sizeof(GLfloat) is the size of the tetrahedrom array, since it contains 12 Vertex values
-	// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
-	glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
+	//// Copy the vertex data from tetrahedron to our buffer
+	//// 12 * sizeof(GLfloat) is the size of the tetrahedrom array, since it contains 12 Vertex values
+	//// GL_STATIC_DRAW means that we don't expect this buffer to change (It's a hint that it can be stored on GPU)
+	//glBufferData(GL_ARRAY_BUFFER, m_cubeVertices.size() * sizeof(Vertex), &m_cubeVertices[0], GL_STATIC_DRAW);
 
-	// Note: The following attribute indexes must match what is defined in shader (in shaderprogram.cpp) for glBindAttribLocation() calls!
+	//// Note: The following attribute indexes must match what is defined in shader (in shaderprogram.cpp) for glBindAttribLocation() calls!
 
-	// Specify that our coordinate data is going into attribute index 0 (shaderProgram.getPositionAttribLocation()), and contains three doubles per vertex
-	// Note stride = sizeof ( struct Vertex ) and pointer = ( const GLvoid* ) 0
-	glVertexAttribPointer(shaderProgram.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, position)));
+	//// Specify that our coordinate data is going into attribute index 0 (shaderProgram.getPositionAttribLocation()), and contains three doubles per vertex
+	//// Note stride = sizeof ( struct Vertex ) and pointer = ( const GLvoid* ) 0
+	//glVertexAttribPointer(shaderProgram.getPositionAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, position)));
 
-	// Enable attribute index 0 as being used
-	glEnableVertexAttribArray(shaderProgram.getPositionAttribLocation());
+	//// Enable attribute index 0 as being used
+	//glEnableVertexAttribArray(shaderProgram.getPositionAttribLocation());
 
-	// Normal vertex attribute
-	glVertexAttribPointer(shaderProgram.getNormalAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, normal)));
+	//// Normal vertex attribute
+	//glVertexAttribPointer(shaderProgram.getNormalAttribLocation(), 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<GLvoid*>(offsetof(Vertex, normal)));
 
-	glEnableVertexAttribArray(shaderProgram.getNormalAttribLocation());
+	//glEnableVertexAttribArray(shaderProgram.getNormalAttribLocation());
 
 	// Our generated VAO is now ready and enabled for use
 	// We could disable by calling glBindVertexArray(0) if we want to work with multiple objects and not use created VAO at the moment.
 
 	// Set up our view matrix that determines camera position in the scene
 	// glm::lookAt replaces old GLU library functionality for creating a projection matrix
-	viewMat = glm::lookAt(glm::vec3(0.0f, 1.5f, 5.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
+	m_viewPos = { 0.0f, 0.0f, 5.0f };
+	viewMat = glm::lookAt(m_viewPos, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	return true;
 }
 
@@ -154,7 +157,7 @@ void MonkeyScene::update(float timestep)
 	m_yaw += glm::two_pi<float>() * 0.1f * timestep;
 	m_posY = glm::sin(m_counter);
 	m_posZ = glm::cos(m_counter);
-	m_counter += .001f;
+	m_counter += 1.0f*timestep;
 	
 }
 
@@ -171,9 +174,8 @@ void MonkeyScene::render()
 	// Select correct shader program for this object (we never selected anything else to replace that state after init())
 	glUseProgram(shaderProgram.getShaderProgram());
 
-	glm::vec4 viewPos(0.0f, 1.0f, 5.0f, 1.0f);
 	auto modelviewMat = viewMat * modelMat;
-	glm::vec4 lightPos(2.0f, 2.0f, 3.0f, 1.0f);
+	glm::vec4 lightPos(2.0f, 0.0f, 10.0f, 1.0f);
 	auto lightInView = viewMat * lightPos;
 
 
@@ -187,8 +189,8 @@ void MonkeyScene::render()
 	glm::vec4 mDiffuse(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mSpecular(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mEmission(0.0, 0.3, 0.3, 1.0);
-	float mShininess = 10;
-
+	float mShininess = 32;
+	
 	glm::vec4 ambientProduct = lAmbient * mAmbient;
 	glm::vec4 diffuseProduct = lDiffuse * mDiffuse;
 	glm::vec4 specularProduct = lSpecular * mSpecular;
@@ -202,8 +204,12 @@ void MonkeyScene::render()
 	glUniform1fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "mShininess"), 1, &mShininess);
 	glUniform3fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "color"), 1, glm::value_ptr(color));
 
+	glUniform4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "viewpos"), 1, glm::value_ptr(m_viewPos));
+	
 	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "modelview"), 1, GL_FALSE, glm::value_ptr(modelviewMat));
-	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(),"projection"), 1, GL_FALSE, glm::value_ptr(projectionMat));
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(),"_proj"), 1, GL_FALSE, glm::value_ptr(projectionMat));
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "_view"), 1, GL_FALSE, glm::value_ptr(viewMat));
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "_model"), 1, GL_FALSE, glm::value_ptr(modelMat));
 	
 	
 	glUniform4fv(glGetUniformLocation(shaderProgram.getShaderProgram(), "lightPos"), 1, glm::value_ptr(lightInView));
@@ -218,12 +224,14 @@ void MonkeyScene::render()
 	glUniform3fv(lightColorLoc, 1, glm::value_ptr(ambLightColor));
 	
 	// For drawing the cube it needs to be bound using (we never bound anything else to replace that state after init())
-	glBindVertexArray(vao);
+	//glBindVertexArray(vao);
+	m_cube.bind();
 
 	// Count is the number of elements in the array that will form triangles. It is not the number of triangles defined by the array.
 	// When VBOs are in use and GL_ELEMENT_ARRAY_BUFFER is bound, the last parameter (pointer to data) is interpreted as an offset within IBO instead of
 	// actual program memory address.
-	glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_cubeIndices.size()), GL_UNSIGNED_INT, 0);
+	glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(m_cube.getIndiceCount()), GL_UNSIGNED_INT, 0);
+	m_cube.unbind();
 }
 
 bool MonkeyScene::handleEvent(const SDL_Event & e)
