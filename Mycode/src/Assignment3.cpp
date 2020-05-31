@@ -124,9 +124,15 @@ void Assignment_3::update(float timestep)
 	rot.y = m_yaw;
 	m_mercurius.rotate(rot);
 
+	rot = m_earth.getRotation();
+	m_roll += glm::two_pi<float>() * 0.1f * timestep;
+	rot.z = m_roll;
+	m_earth.rotate(rot);
+
 	m_camera.update(timestep);
 	m_sun.update(timestep);
 	m_mercurius.update(timestep);
+	m_earth.update(timestep);
 
 }
 
@@ -151,7 +157,7 @@ void Assignment_3::render()
 	glDrawElements(GL_TRIANGLES, m_sun.getIndiceCount(), GL_UNSIGNED_INT, 0);
 	m_sun.unbind();
 
-	// Draw cube2
+	// Draw mercurius
 	auto T2 = glm::translate(glm::mat4(), { -10, 0,0 });
 	auto Ry = glm::rotate(glm::mat4(),m_yaw, { 0,1,0 });
 	m_modelCube2 = Mcube * m_mercurius.getLocalTransform();
@@ -202,6 +208,15 @@ void Assignment_3::render()
 	glDrawElements(GL_TRIANGLES, m_mercurius.getIndiceCount(), GL_UNSIGNED_INT, 0);
 	m_mercurius.unbind();
 
+	// Draw earth
+	m_modelEarth = Mcube * m_earth.getLocalTransform();
+	// Uniforms
+	glm::vec3 colorEarth(.1f,1.0f,.4f);
+	glUniform3fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_objectColor"), 1, glm::value_ptr(colorEarth));
+	glUniformMatrix4fv(glGetUniformLocation(m_lightingShader.getShaderProgram(), "_modelMat"), 1, GL_FALSE, glm::value_ptr(m_modelEarth));
+	m_earth.bind();
+	glDrawElements(GL_TRIANGLES, m_earth.getIndiceCount(), GL_UNSIGNED_INT, 0);
+	m_earth.unbind();
 	glUseProgram(m_shaderSkybox.getShaderProgram());
 
 	auto M = /*glm::mat4(1.0F);*/ glm::translate(glm::mat4(), glm::vec3(0.0f, 0.0f, 0.0f));

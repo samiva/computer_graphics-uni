@@ -32,10 +32,13 @@ private:
 
 	glm::mat4 m_modelCube;
 	glm::mat4 m_modelCube2;
+	glm::mat4 m_modelEarth;
 	Cube m_sun;
 	Cube m_mercurius;
+	Cube m_earth;
 
 	float m_yaw = 0;
+	float m_roll = 0;
 
 	GLuint m_vao, m_vbo, m_ebo;
 	GLuint m_vaoCube2, m_vboCube2, m_eboCube2;
