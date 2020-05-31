@@ -30,6 +30,8 @@ bool Assignment_3::init()
 {
 	createCube();
 	m_mercurius.translate({ -15, 0, 0 });
+	m_earth.translate({ 0.0f,15.0f,0.0f });
+
 	auto cubeShaders = getShaderPaths("BasicShader");
 	if (!m_shaderCube.load(cubeShaders[0], cubeShaders[1])) {
 		return false;
@@ -139,6 +141,7 @@ void Assignment_3::update(float timestep)
 void Assignment_3::render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glCullFace(GL_BACK);
 	glUseProgram(m_shaderCube.getShaderProgram());
 
 	auto Mcube = m_sun.getModel();
@@ -158,8 +161,7 @@ void Assignment_3::render()
 	m_sun.unbind();
 
 	// Draw mercurius
-	auto T2 = glm::translate(glm::mat4(), { -10, 0,0 });
-	auto Ry = glm::rotate(glm::mat4(),m_yaw, { 0,1,0 });
+	
 	m_modelCube2 = Mcube * m_mercurius.getLocalTransform();
 
 	glm::vec3 colorMercurius(.5f,.01f,.01f);
@@ -318,6 +320,7 @@ void Assignment_3::createCube()
 {
 	m_sun.create();
 	m_mercurius.create();
+	m_earth.create();
 	// Front
 	//m_cubeVertices.push_back(Vertex({ -1.0f,1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));
 	//m_cubeVertices.push_back(Vertex({ -1.0f,-1.0f, 1.0f }, { 0,0,0 }, { 0,0 }));

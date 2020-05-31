@@ -23,5 +23,5 @@ void main(void)
 	// Multiply the mvp matrix by the vertex to obtain our final vertex position
 	// gl_Position is an output variable defined by standards
     ex_Normal = mat3(inverse(transpose(_modelMat)))*in_Normal;
-	gl_Position = _projMat * _viewMat*_modelMat * vec4(in_Position,1.0);
+	gl_Position = _projMat * _viewMat* vec4(FragPos,1.0);
 }

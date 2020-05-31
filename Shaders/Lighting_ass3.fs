@@ -5,7 +5,7 @@ in vec3 lightVector; // L
 layout (location = 0) out vec4 fragColor;
 
 uniform vec3 _lightcolor;
-uniform vec4 _lightposition;
+uniform vec4 _lightPos;
 uniform vec4 _viewpos;
 
 uniform vec3 _objectColor;
@@ -22,7 +22,7 @@ void main(void) {
 
     // Calculate specular
     vec3 viewDir = normalize(_viewpos.xyz-FragPos); // normalize(_viewpos.xyz - FragPos); // E
-    vec3 halfVec = normalize(lightVector.xyz+viewDir); //reflect(-lightVector.xyz, norm); // H
+    vec3 halfVec = lightVector.xyz+viewDir; //reflect(-lightVector.xyz, norm); // H
     float spec = pow(max(dot(norm, halfVec),0.0), _mShininess);
     vec4 specular = spec * _specularProduct;
     
@@ -30,7 +30,7 @@ void main(void) {
         specular = vec4(0.0, 0.0, 0.0, 1.0);
     }
 
-    float lightDst = length(lightVector);
+    float lightDst = length(vec3(_lightPos)-FragPos);
     float lightAttenuation = 1/lightDst;
 
     vec3 res = lightAttenuation * vec3(_ambientProduct + diffuse + specular) * _objectColor;
