@@ -4,637 +4,275 @@ SDL_GL_CONTEXT_MAJOR_VERSION: 3
 SDL_GL_CONTEXT_MINOR_VERSION: 3
 Base path for loading textures etc: 
 Provided materials: 
-GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 1 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
-GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 2 (bound to GL_ELEMENT_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
-GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 3 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
-GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 4 (bound to GL_ELEMENT_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
-GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 5 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
-GL_Debug: API Other (Note): 131185 Buffer detailed info: Buffer object 6 (bound to GL_ELEMENT_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations.
 Initial width and height: 640 x 480
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Camera {target: -4.48074 0 1.06003 up: 0 1 0
-Key 79 (Right) pressed
-Camera {target: -4.32876 0 0.983861 up: 0 1 0
-Camera {target: -4.18572 0 0.912169 up: 0 1 0
-Camera {target: -4.04268 0 0.840478 up: 0 1 0
-Camera {target: -3.8907 0 0.764305 up: 0 1 0
-Camera {target: -3.73872 0 0.688132 up: 0 1 0
-Camera {target: -3.58674 0 0.611959 up: 0 1 0
-Camera {target: -3.4437 0 0.540268 up: 0 1 0
-Camera {target: -3.29172 0 0.464095 up: 0 1 0
-Camera {target: -3.13974 0 0.387922 up: 0 1 0
-Camera {target: -2.9967 0 0.316231 up: 0 1 0
-Camera {target: -2.84472 0 0.240058 up: 0 1 0
-Camera {target: -2.69274 0 0.163885 up: 0 1 0
-Camera {target: -2.5497 0 0.0921936 up: 0 1 0
-Camera {target: -2.39772 0 0.0160208 up: 0 1 0
-Camera {target: -2.25468 0 -0.0556707 up: 0 1 0
-Camera {target: -2.10271 0 -0.131844 up: 0 1 0
-Camera {target: -1.95073 0 -0.208016 up: 0 1 0
-Camera {target: -1.79875 0 -0.284189 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Key 79 (Right) released
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
-Camera {target: -1.65571 0 -0.355881 up: 0 1 0
 Key 81 (Down) pressed
-Camera {target: -1.57953 0 -0.203901 up: 0 1 0
-Camera {target: -1.50336 0 -0.0519218 up: 0 1 0
-Camera {target: -1.42719 0 0.100058 up: 0 1 0
-Camera {target: -1.3555 0 0.243097 up: 0 1 0
-Camera {target: -1.27932 0 0.395077 up: 0 1 0
-Camera {target: -1.20763 0 0.538116 up: 0 1 0
-Camera {target: -1.13146 0 0.690096 up: 0 1 0
-Camera {target: -1.05529 0 0.842075 up: 0 1 0
-Camera {target: -0.979115 0 0.994055 up: 0 1 0
-Camera {target: -0.907423 0 1.13709 up: 0 1 0
-Camera {target: -0.831251 0 1.28907 up: 0 1 0
-Camera {target: -0.755078 0 1.44105 up: 0 1 0
-Camera {target: -0.683386 0 1.58409 up: 0 1 0
-Camera {target: -0.607214 0 1.73607 up: 0 1 0
-Camera {target: -0.531041 0 1.88805 up: 0 1 0
-Camera {target: -0.459349 0 2.03109 up: 0 1 0
-Camera {target: -0.383177 0 2.18307 up: 0 1 0
-Camera {target: -0.307004 0 2.33505 up: 0 1 0
-Camera {target: -0.235312 0 2.47809 up: 0 1 0
-Camera {target: -0.15914 0 2.63007 up: 0 1 0
-Camera {target: -0.0874481 0 2.77311 up: 0 1 0
-Camera {target: -0.0112758 0 2.92509 up: 0 1 0
-Camera {target: 0.0648966 0 3.07707 up: 0 1 0
-Camera {target: 0.141069 0 3.22905 up: 0 1 0
-Camera {target: 0.212761 0 3.37209 up: 0 1 0
-Camera {target: 0.288933 0 3.52407 up: 0 1 0
-Camera {target: 0.365106 0 3.67605 up: 0 1 0
-Camera {target: 0.436798 0 3.81909 up: 0 1 0
-Camera {target: 0.51297 0 3.97107 up: 0 1 0
-Camera {target: 0.589142 0 4.12304 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 0.660834 0 4.26608 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 0.737007 0 4.41806 up: 0 1 0
-Camera {target: 0.813179 0 4.57004 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 0.889351 0 4.72202 up: 0 1 0
-Camera {target: 0.961043 0 4.86506 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.03722 0 5.01704 up: 0 1 0
-Camera {target: 1.10891 0 5.16008 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.18508 0 5.31206 up: 0 1 0
-Camera {target: 1.26125 0 5.46404 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.33294 0 5.60708 up: 0 1 0
-Camera {target: 1.40912 0 5.75906 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.48529 0 5.91104 up: 0 1 0
-Camera {target: 1.55698 0 6.05408 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.63315 0 6.20606 up: 0 1 0
-Camera {target: 1.70933 0 6.35804 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.7855 0 6.51002 up: 0 1 0
-Camera {target: 1.85719 0 6.65306 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 1.93336 0 6.80504 up: 0 1 0
-Camera {target: 2.00505 0 6.94808 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.08123 0 7.10006 up: 0 1 0
-Camera {target: 2.1574 0 7.25204 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.22909 0 7.39507 up: 0 1 0
-Camera {target: 2.30526 0 7.54705 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.38144 0 7.69903 up: 0 1 0
-Camera {target: 2.45313 0 7.84207 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.5293 0 7.99405 up: 0 1 0
-Camera {target: 2.60547 0 8.14603 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.68164 0 8.29801 up: 0 1 0
-Camera {target: 2.75334 0 8.44105 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.83399 0 8.60197 up: 0 1 0
-Camera {target: 2.9012 0 8.73607 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 2.97737 0 8.88805 up: 0 1 0
-Camera {target: 3.05355 0 9.04003 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 3.12524 0 9.18307 up: 0 1 0
-Camera {target: 3.20141 0 9.33505 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 3.27758 0 9.48703 up: 0 1 0
-Camera {target: 3.34927 0 9.63007 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 3.42545 0 9.78205 up: 0 1 0
-Camera {target: 3.50162 0 9.93403 up: 0 1 0
-Key 81 (Down) pressed
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
 Key 81 (Down) released
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
-Camera {target: 3.57331 0 10.0771 up: 0 1 0
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) released
+Key 79 (Right) pressed
+Key 79 (Right) released
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) released
+Key 4 (A) pressed
+Key 4 (A) released
 Key 80 (Left) pressed
-Camera {target: 3.43027 0 10.1488 up: 0 1 0
-Camera {target: 3.27829 0 10.2249 up: 0 1 0
-Camera {target: 3.12631 0 10.3011 up: 0 1 0
-Camera {target: 2.98327 0 10.3728 up: 0 1 0
-Camera {target: 2.83129 0 10.449 up: 0 1 0
-Camera {target: 2.67931 0 10.5251 up: 0 1 0
-Camera {target: 2.53627 0 10.5968 up: 0 1 0
-Camera {target: 2.38429 0 10.673 up: 0 1 0
-Camera {target: 2.23232 0 10.7492 up: 0 1 0
-Camera {target: 2.08928 0 10.8209 up: 0 1 0
-Camera {target: 1.9373 0 10.897 up: 0 1 0
-Camera {target: 1.78532 0 10.9732 up: 0 1 0
-Camera {target: 1.64228 0 11.0449 up: 0 1 0
-Camera {target: 1.4903 0 11.1211 up: 0 1 0
-Camera {target: 1.33832 0 11.1972 up: 0 1 0
-Camera {target: 1.19528 0 11.2689 up: 0 1 0
-Camera {target: 1.0433 0 11.3451 up: 0 1 0
-Camera {target: 0.89132 0 11.4213 up: 0 1 0
-Camera {target: 0.74828 0 11.493 up: 0 1 0
-Camera {target: 0.596301 0 11.5691 up: 0 1 0
-Camera {target: 0.444321 0 11.6453 up: 0 1 0
-Camera {target: 0.301281 0 11.717 up: 0 1 0
-Camera {target: 0.149302 0 11.7932 up: 0 1 0
-Camera {target: -0.00267744 0 11.8693 up: 0 1 0
-Camera {target: -0.145717 0 11.941 up: 0 1 0
-Camera {target: -0.297697 0 12.0172 up: 0 1 0
-Camera {target: -0.449676 0 12.0934 up: 0 1 0
-Camera {target: -0.592716 0 12.1651 up: 0 1 0
-Camera {target: -0.744695 0 12.2412 up: 0 1 0
-Camera {target: -0.896674 0 12.3174 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -1.03971 0 12.3891 up: 0 1 0
-Camera {target: -1.19169 0 12.4653 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -1.34367 0 12.5415 up: 0 1 0
-Camera {target: -1.48671 0 12.6131 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -1.63869 0 12.6893 up: 0 1 0
-Camera {target: -1.78173 0 12.761 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -1.93371 0 12.8372 up: 0 1 0
-Camera {target: -2.08569 0 12.9134 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -2.23767 0 12.9895 up: 0 1 0
-Camera {target: -2.38071 0 13.0612 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -2.53269 0 13.1374 up: 0 1 0
-Camera {target: -2.68467 0 13.2136 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -2.82771 0 13.2853 up: 0 1 0
-Camera {target: -2.97969 0 13.3614 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -3.13167 0 13.4376 up: 0 1 0
-Camera {target: -3.27471 0 13.5093 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -3.42669 0 13.5855 up: 0 1 0
-Camera {target: -3.56972 0 13.6572 up: 0 1 0
 Key 80 (Left) pressed
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
 Key 80 (Left) released
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
-Camera {target: -3.7217 0 13.7333 up: 0 1 0
+Key 80 (Left) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) released
+Key 80 (Left) released
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) released
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) released
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) released
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) pressed
+Key 80 (Left) released
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) pressed
+Key 81 (Down) released
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) released
+Key 81 (Down) pressed
+Key 81 (Down) released
+Key 82 (Up) pressed
+Key 82 (Up) released
+Key 81 (Down) pressed
+Key 81 (Down) released
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) pressed
+Key 79 (Right) released
 Key 41 (Escape) pressed
+Key 41 (Escape) released

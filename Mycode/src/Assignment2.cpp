@@ -2,6 +2,7 @@
 #include "glm/gtc/type_ptr.hpp"
 #include <iostream>
 #include "cg-sources/texture.h"
+#include "../include/helpers.h"
 
 void Assignment_2::createStuff()
 {
@@ -80,7 +81,7 @@ void Assignment_2::createStuff()
 	m_cubeIndices.push_back(20);
 	m_cubeIndices.push_back(22);
 	m_cubeIndices.push_back(23);
-	m_texture = new Texture("data/uvtemplate.png");
+	m_texture = new Texture("../../cg-sources/data/uvtemplate.png");
 }
 
 Assignment_2::Assignment_2()
@@ -113,7 +114,8 @@ Assignment_2::~Assignment_2()
 bool Assignment_2::init()
 {
 	createStuff();
-	if (!m_shaderCube.load("data/assignment2.vs", "data/assignment2.fs"))
+	auto shaders = getShaderPaths("TextureShader");
+	if (!m_shaderCube.load(shaders[0],shaders[1]))
 		return false;
 
 	glUseProgram(m_shaderCube.getShaderProgram());

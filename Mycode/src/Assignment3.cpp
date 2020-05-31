@@ -231,7 +231,6 @@ void Assignment_3::render()
 		glBindTextureUnit(0, m_skyboxCubeMap);
 	}
 	glBindVertexArray(m_vaoSkybox);
-	//glDisable(GL_CULL_FACE);
 	glCullFace(GL_FRONT);
 	glDepthFunc(GL_LEQUAL);
 	glDrawElements(GL_TRIANGLES, m_skyboxIndices.size(), GL_UNSIGNED_INT, 0	);
