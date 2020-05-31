@@ -189,7 +189,7 @@ void MonkeyScene::render()
 	glm::vec4 mDiffuse(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mSpecular(1.0, 0.8, 0.0, 1.0);
 	glm::vec4 mEmission(0.0, 0.3, 0.3, 1.0);
-	float mShininess = 32;
+	float mShininess = 16;
 	
 	glm::vec4 ambientProduct = lAmbient * mAmbient;
 	glm::vec4 diffuseProduct = lDiffuse * mDiffuse;
