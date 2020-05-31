@@ -36,6 +36,7 @@ private:
 	Cube m_sun;
 	Cube m_mercurius;
 	Cube m_earth;
+	Cube m_moon;
 
 	float m_yaw = 0;
 	float m_roll = 0;
